@@ -1,0 +1,53 @@
+● kali
+    State: degraded
+     Jobs: 0 queued
+   Failed: 1 units
+    Since: Thu 1970-01-01 00:00:01 UTC; 49 years 1 months ago
+   CGroup: /
+           ├─user.slice
+           │ └─user-0.slice
+           │   ├─session-c9.scope
+           │   │ ├─5203 sshd: root@pts/0
+           │   │ ├─5227 -bash
+           │   │ ├─5253 /sbin/mount.ntfs /dev/sda1 /tmp/sda -o rw
+           │   │ └─5271 systemctl status
+           │   └─user@0.service
+           │     └─init.scope
+           │       ├─5209 /lib/systemd/systemd --user
+           │       └─5212 (sd-pam)
+           ├─init.scope
+           │ └─1 /sbin/init
+           └─system.slice
+             ├─systemd-timesyncd.service
+             │ └─332 /lib/systemd/systemd-timesyncd
+             ├─NetworkManager.service
+             │ └─409 /usr/sbin/NetworkManager --no-daemon
+             ├─dbus.service
+             │ └─402 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+             ├─hciuart.service
+             │ └─431 /usr/bin/hciattach /dev/serial1 bcm43xx 3000000 flow - b8:27:eb:e1:3d:02
+             ├─ssh.service
+             │ └─5196 /usr/sbin/sshd -D
+             ├─system-getty.slice
+             │ └─getty@tty1.service
+             │   └─1999 /sbin/agetty -o -p -- \u --noclear tty1 linux
+             ├─wpa_supplicant.service
+             │ └─475 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+             ├─ModemManager.service
+             │ └─395 /usr/sbin/ModemManager --filter-policy=strict
+             ├─systemd-logind.service
+             │ └─412 /lib/systemd/systemd-logind
+             ├─polkit.service
+             │ └─443 /usr/lib/policykit-1/polkitd --no-debug
+             ├─cron.service
+             │ └─393 /usr/sbin/cron -f
+             ├─systemd-udevd.service
+             │ └─166 /lib/systemd/systemd-udevd
+             ├─rsyslog.service
+             │ └─383 /usr/sbin/rsyslogd -n -iNONE
+             ├─networking.service
+             │ └─424 /sbin/dhclient -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -df /var/lib/dhcp/dhclient6.eth0.leases eth0
+             ├─systemd-journald.service
+             │ └─144 /lib/systemd/systemd-journald
+             └─haveged.service
+               └─338 /usr/sbin/haveged --Foreground --verbose=1 -w 1024
