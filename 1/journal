@@ -1,0 +1,2782 @@
+-- Logs begin at Thu 2019-02-14 10:11:58 UTC, end at Thu 2019-02-14 10:35:01 UTC. --
+Feb 14 10:11:58 kali kernel: Booting Linux on physical CPU 0x0
+Feb 14 10:11:58 kali kernel: Linux version 4.19.55-Re4son-v7l+ (root@kali-pi-dev) (gcc version 8.2.0 (Debian 8.2.0-6)) #1 SMP Sun Jun 30 15:39:30 AEST 2019
+Feb 14 10:11:58 kali kernel: CPU: ARMv7 Processor [410fd083] revision 3 (ARMv7), cr=30c5383d
+Feb 14 10:11:58 kali kernel: CPU: div instructions available: patching division code
+Feb 14 10:11:58 kali kernel: CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+Feb 14 10:11:58 kali kernel: OF: fdt: Machine model: Raspberry Pi 4 Model B Rev 1.1
+Feb 14 10:11:58 kali kernel: Memory policy: Data cache writealloc
+Feb 14 10:11:58 kali kernel: cma: Reserved 64 MiB at 0x0000000037400000
+Feb 14 10:11:58 kali kernel: On node 0 totalpages: 1012736
+Feb 14 10:11:58 kali kernel:   DMA zone: 1728 pages used for memmap
+Feb 14 10:11:58 kali kernel:   DMA zone: 0 pages reserved
+Feb 14 10:11:58 kali kernel:   DMA zone: 196608 pages, LIFO batch:63
+Feb 14 10:11:58 kali kernel:   HighMem zone: 816128 pages, LIFO batch:63
+Feb 14 10:11:58 kali kernel: random: get_random_bytes called from start_kernel+0xc0/0x4e0 with crng_init=0
+Feb 14 10:11:58 kali kernel: percpu: Embedded 17 pages/cpu s40204 r8192 d21236 u69632
+Feb 14 10:11:58 kali kernel: pcpu-alloc: s40204 r8192 d21236 u69632 alloc=17*4096
+Feb 14 10:11:58 kali kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Feb 14 10:11:58 kali kernel: Built 1 zonelists, mobility grouping on.  Total pages: 1011008
+Feb 14 10:11:58 kali kernel: Kernel command line: 8250.nr_uarts=0 cma=64M bcm2708_fb.fbwidth=1280 bcm2708_fb.fbheight=800 bcm2708_fb.fbswap=1 smsc95xx.macaddr=B8:27:EB:4B:97:A8 vc_mem.mem_base=0x3ec00000 vc_mem.mem_size=0x40000000  dwc_otg.fiq_fix_enable=2 console=ttyS0,115200 kgdboc=ttyS0,115200 console=tty1 root=/dev/mmcblk0p7 rootfstype=ext4 rootwait rootflags=noload net.ifnames=0
+Feb 14 10:11:58 kali kernel: Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Feb 14 10:11:58 kali kernel: Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Feb 14 10:11:58 kali kernel: Memory: 3932660K/4050944K available (8192K kernel code, 704K rwdata, 2388K rodata, 2048K init, 858K bss, 52748K reserved, 65536K cma-reserved, 3198976K highmem)
+Feb 14 10:11:58 kali kernel: Virtual kernel memory layout:
+                                 vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+                                 fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+                                 vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+                                 lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+                                 pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+                                 modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+                                   .text : 0x(ptrval) - 0x(ptrval)   (10208 kB)
+                                   .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)
+                                   .data : 0x(ptrval) - 0x(ptrval)   ( 705 kB)
+                                    .bss : 0x(ptrval) - 0x(ptrval)   ( 859 kB)
+Feb 14 10:11:58 kali kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Feb 14 10:11:58 kali kernel: ftrace: allocating 28632 entries in 84 pages
+Feb 14 10:11:58 kali kernel: rcu: Hierarchical RCU implementation.
+Feb 14 10:11:58 kali kernel: NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+Feb 14 10:11:58 kali kernel: GIC: Using split EOI/Deactivate mode
+Feb 14 10:11:58 kali kernel: arch_timer: cp15 timer(s) running at 54.00MHz (phys).
+Feb 14 10:11:58 kali kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xc743ce346, max_idle_ns: 440795203123 ns
+Feb 14 10:11:58 kali kernel: sched_clock: 56 bits at 54MHz, resolution 18ns, wraps every 4398046511102ns
+Feb 14 10:11:58 kali kernel: Switching to timer-based delay loop, resolution 18ns
+Feb 14 10:11:58 kali kernel: Console: colour dummy device 80x30
+Feb 14 10:11:58 kali kernel: console [tty1] enabled
+Feb 14 10:11:58 kali kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 108.00 BogoMIPS (lpj=540000)
+Feb 14 10:11:58 kali kernel: pid_max: default: 32768 minimum: 301
+Feb 14 10:11:58 kali kernel: Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Feb 14 10:11:58 kali kernel: Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+Feb 14 10:11:58 kali kernel: Disabling memory control group subsystem
+Feb 14 10:11:58 kali kernel: CPU: Testing write buffer coherency: ok
+Feb 14 10:11:58 kali kernel: CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+Feb 14 10:11:58 kali kernel: Setting up static identity map for 0x200000 - 0x20003c
+Feb 14 10:11:58 kali kernel: rcu: Hierarchical SRCU implementation.
+Feb 14 10:11:58 kali kernel: smp: Bringing up secondary CPUs ...
+Feb 14 10:11:58 kali kernel: CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+Feb 14 10:11:58 kali kernel: CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+Feb 14 10:11:58 kali kernel: CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+Feb 14 10:11:58 kali kernel: smp: Brought up 1 node, 4 CPUs
+Feb 14 10:11:58 kali kernel: SMP: Total of 4 processors activated (432.00 BogoMIPS).
+Feb 14 10:11:58 kali kernel: CPU: All CPU(s) started in HYP mode.
+Feb 14 10:11:58 kali kernel: CPU: Virtualization extensions available.
+Feb 14 10:11:58 kali kernel: devtmpfs: initialized
+Feb 14 10:11:58 kali kernel: VFP support v0.3: implementor 41 architecture 3 part 40 variant 8 rev 0
+Feb 14 10:11:58 kali kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+Feb 14 10:11:58 kali kernel: futex hash table entries: 1024 (order: 4, 65536 bytes)
+Feb 14 10:11:58 kali kernel: pinctrl core: initialized pinctrl subsystem
+Feb 14 10:11:58 kali kernel: NET: Registered protocol family 16
+Feb 14 10:11:58 kali kernel: DMA: preallocated 256 KiB pool for atomic coherent allocations
+Feb 14 10:11:58 kali kernel: hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+Feb 14 10:11:58 kali kernel: hw-breakpoint: maximum watchpoint size is 8 bytes.
+Feb 14 10:11:58 kali kernel: Serial: AMBA PL011 UART driver
+Feb 14 10:11:58 kali kernel: bcm2835-mbox fe00b880.mailbox: mailbox enabled
+Feb 14 10:11:58 kali kernel: bcm2835-dma fe007000.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+Feb 14 10:11:58 kali kernel: bcm2835-dma fe007000.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+Feb 14 10:11:58 kali kernel: bcm2835-dma fe007b00.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+Feb 14 10:11:58 kali kernel: vgaarb: loaded
+Feb 14 10:11:58 kali kernel: SCSI subsystem initialized
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver usbfs
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver hub
+Feb 14 10:11:58 kali kernel: usbcore: registered new device driver usb
+Feb 14 10:11:58 kali kernel: raspberrypi-firmware soc:firmware: Attached to firmware from 2019-06-25 12:53, variant start
+Feb 14 10:11:58 kali kernel: raspberrypi-firmware soc:firmware: Firmware hash is d07dd5438703d0f664bc1385c89e755d128aa5a4
+Feb 14 10:11:58 kali kernel: clocksource: Switched to clocksource arch_sys_counter
+Feb 14 10:11:58 kali kernel: VFS: Disk quotas dquot_6.6.0
+Feb 14 10:11:58 kali kernel: VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+Feb 14 10:11:58 kali kernel: FS-Cache: Loaded
+Feb 14 10:11:58 kali kernel: CacheFiles: Loaded
+Feb 14 10:11:58 kali kernel: NET: Registered protocol family 2
+Feb 14 10:11:58 kali kernel: tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+Feb 14 10:11:58 kali kernel: TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+Feb 14 10:11:58 kali kernel: TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+Feb 14 10:11:58 kali kernel: TCP: Hash tables configured (established 8192 bind 8192)
+Feb 14 10:11:58 kali kernel: UDP hash table entries: 512 (order: 2, 16384 bytes)
+Feb 14 10:11:58 kali kernel: UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+Feb 14 10:11:58 kali kernel: NET: Registered protocol family 1
+Feb 14 10:11:58 kali kernel: RPC: Registered named UNIX socket transport module.
+Feb 14 10:11:58 kali kernel: RPC: Registered udp transport module.
+Feb 14 10:11:58 kali kernel: RPC: Registered tcp transport module.
+Feb 14 10:11:58 kali kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Feb 14 10:11:58 kali kernel: PCI: CLS 0 bytes, default 64
+Feb 14 10:11:58 kali kernel: Initialise system trusted keyrings
+Feb 14 10:11:58 kali kernel: workingset: timestamp_bits=14 max_order=20 bucket_order=6
+Feb 14 10:11:58 kali kernel: FS-Cache: Netfs 'nfs' registered for caching
+Feb 14 10:11:58 kali kernel: NFS: Registering the id_resolver key type
+Feb 14 10:11:58 kali kernel: Key type id_resolver registered
+Feb 14 10:11:58 kali kernel: Key type id_legacy registered
+Feb 14 10:11:58 kali kernel: nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+Feb 14 10:11:58 kali kernel: Key type asymmetric registered
+Feb 14 10:11:58 kali kernel: Asymmetric key parser 'x509' registered
+Feb 14 10:11:58 kali kernel: bounce: pool size: 64 pages
+Feb 14 10:11:58 kali kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+Feb 14 10:11:58 kali kernel: io scheduler noop registered
+Feb 14 10:11:58 kali kernel: io scheduler deadline registered
+Feb 14 10:11:58 kali kernel: io scheduler cfq registered (default)
+Feb 14 10:11:58 kali kernel: io scheduler mq-deadline registered
+Feb 14 10:11:58 kali kernel: io scheduler kyber registered
+Feb 14 10:11:58 kali kernel: brcm-pcie fd500000.pcie: dmabounce: initialised - 32768 kB, threshold 0x00000000c0000000
+Feb 14 10:11:58 kali kernel: brcm-pcie fd500000.pcie: could not get clock
+Feb 14 10:11:58 kali kernel: brcm-pcie fd500000.pcie: host bridge /scb/pcie@7d500000 ranges:
+Feb 14 10:11:58 kali kernel: brcm-pcie fd500000.pcie:   MEM 0x600000000..0x603ffffff -> 0xf8000000
+Feb 14 10:11:58 kali kernel: brcm-pcie fd500000.pcie: link up, 5.0 Gbps x1 (!SSC)
+Feb 14 10:11:58 kali kernel: brcm-pcie fd500000.pcie: PCI host bridge to bus 0000:00
+Feb 14 10:11:58 kali kernel: pci_bus 0000:00: root bus resource [bus 00-01]
+Feb 14 10:11:58 kali kernel: pci_bus 0000:00: root bus resource [mem 0x600000000-0x603ffffff] (bus address [0xf8000000-0xfbffffff])
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0: [14e4:2711] type 01 class 0x060400
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0: PME# supported from D0 D3hot
+Feb 14 10:11:58 kali kernel: PCI: bus0: Fast back to back transfers disabled
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+Feb 14 10:11:58 kali kernel: pci 0000:01:00.0: [1106:3483] type 00 class 0x0c0330
+Feb 14 10:11:58 kali kernel: pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+Feb 14 10:11:58 kali kernel: pci 0000:01:00.0: PME# supported from D0 D3cold
+Feb 14 10:11:58 kali kernel: PCI: bus1: Fast back to back transfers disabled
+Feb 14 10:11:58 kali kernel: pci_bus 0000:01: busn_res: [bus 01] end is updated to 01
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0: BAR 8: assigned [mem 0x600000000-0x6000fffff]
+Feb 14 10:11:58 kali kernel: pci 0000:01:00.0: BAR 0: assigned [mem 0x600000000-0x600000fff 64bit]
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0: PCI bridge to [bus 01]
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0:   bridge window [mem 0x600000000-0x6000fffff]
+Feb 14 10:11:58 kali kernel: pci 0000:00:00.0: enabling device (0140 -> 0142)
+Feb 14 10:11:58 kali kernel: pci 0000:01:00.0: enabling device (0140 -> 0142)
+Feb 14 10:11:58 kali kernel: bcm2708_fb soc:fb: FB found 1 display(s)
+Feb 14 10:11:58 kali kernel: Console: switching to colour frame buffer device 160x50
+Feb 14 10:11:58 kali kernel: bcm2708_fb soc:fb: Registered framebuffer for display 0, size 1280x800
+Feb 14 10:11:58 kali kernel: iproc-rng200 fe104000.rng: hwrng registered
+Feb 14 10:11:58 kali kernel: vc-mem: phys_addr:0x00000000 mem_base=0x3ec00000 mem_size:0x40000000(1024 MiB)
+Feb 14 10:11:58 kali kernel: vc-sm: Videocore shared memory driver
+Feb 14 10:11:58 kali kernel: gpiomem-bcm2835 fe200000.gpiomem: Initialised: Registers at 0xfe200000
+Feb 14 10:11:58 kali kernel: brd: module loaded
+Feb 14 10:11:58 kali kernel: loop: module loaded
+Feb 14 10:11:58 kali kernel: Loading iSCSI transport class v2.0-870.
+Feb 14 10:11:58 kali kernel: libphy: Fixed MDIO Bus: probed
+Feb 14 10:11:58 kali kernel: bcmgenet fd580000.genet: failed to get enet clock
+Feb 14 10:11:58 kali kernel: bcmgenet fd580000.genet: GENET 5.0 EPHY: 0x0000
+Feb 14 10:11:58 kali kernel: bcmgenet fd580000.genet: failed to get enet-wol clock
+Feb 14 10:11:58 kali kernel: bcmgenet fd580000.genet: failed to get enet-eee clock
+Feb 14 10:11:58 kali kernel: unimac-mdio unimac-mdio.-19: DMA mask not set
+Feb 14 10:11:58 kali kernel: libphy: bcmgenet MII bus: probed
+Feb 14 10:11:58 kali kernel: unimac-mdio unimac-mdio.-19: Broadcom UniMAC MDIO bus at 0x(ptrval)
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver r8152
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver lan78xx
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver smsc95xx
+Feb 14 10:11:58 kali kernel: xhci_hcd 0000:01:00.0: xHCI Host Controller
+Feb 14 10:11:58 kali kernel: xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 1
+Feb 14 10:11:58 kali kernel: xhci_hcd 0000:01:00.0: hcc params 0x002841eb hci version 0x100 quirks 0x0000000000000890
+Feb 14 10:11:58 kali kernel: genirq: irq_chip Brcm_MSI did not update eff. affinity mask of irq 53
+Feb 14 10:11:58 kali kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+Feb 14 10:11:58 kali kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 14 10:11:58 kali kernel: usb usb1: Product: xHCI Host Controller
+Feb 14 10:11:58 kali kernel: usb usb1: Manufacturer: Linux 4.19.55-Re4son-v7l+ xhci-hcd
+Feb 14 10:11:58 kali kernel: usb usb1: SerialNumber: 0000:01:00.0
+Feb 14 10:11:58 kali kernel: hub 1-0:1.0: USB hub found
+Feb 14 10:11:58 kali kernel: hub 1-0:1.0: 1 port detected
+Feb 14 10:11:58 kali kernel: xhci_hcd 0000:01:00.0: xHCI Host Controller
+Feb 14 10:11:58 kali kernel: xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 2
+Feb 14 10:11:58 kali kernel: xhci_hcd 0000:01:00.0: Host supports USB 3.0  SuperSpeed
+Feb 14 10:11:58 kali kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 4.19
+Feb 14 10:11:58 kali kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 14 10:11:58 kali kernel: usb usb2: Product: xHCI Host Controller
+Feb 14 10:11:58 kali kernel: usb usb2: Manufacturer: Linux 4.19.55-Re4son-v7l+ xhci-hcd
+Feb 14 10:11:58 kali kernel: usb usb2: SerialNumber: 0000:01:00.0
+Feb 14 10:11:58 kali kernel: hub 2-0:1.0: USB hub found
+Feb 14 10:11:58 kali kernel: hub 2-0:1.0: 4 ports detected
+Feb 14 10:11:58 kali kernel: dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+Feb 14 10:11:58 kali kernel: dwc_otg fe980000.usb: base=(ptrval)
+Feb 14 10:11:58 kali kernel: Core Release: 2.80a
+Feb 14 10:11:58 kali kernel: Setting default values for core params
+Feb 14 10:11:58 kali kernel: Finished setting default values for core params
+Feb 14 10:11:58 kali kernel: Using Buffer DMA mode
+Feb 14 10:11:58 kali kernel: Periodic Transfer Interrupt Enhancement - disabled
+Feb 14 10:11:58 kali kernel: Multiprocessor Interrupt Enhancement - disabled
+Feb 14 10:11:58 kali kernel: OTG VER PARAM: 0, OTG VER FLAG: 0
+Feb 14 10:11:58 kali kernel: Dedicated Tx FIFOs mode
+Feb 14 10:11:58 kali kernel: WARN::dwc_otg_hcd_init:1045: FIQ DMA bounce buffers: virt = f3d2d000 dma = 0x00000000f7484000 len=9024
+Feb 14 10:11:58 kali kernel: FIQ FSM acceleration enabled for :
+                             Non-periodic Split Transactions
+                             Periodic Split Transactions
+                             High-Speed Isochronous Endpoints
+                             Interrupt/Control Split Transaction hack enabled
+Feb 14 10:11:58 kali kernel: dwc_otg: Microframe scheduler enabled
+Feb 14 10:11:58 kali kernel: WARN::hcd_init_fiq:457: FIQ on core 1
+Feb 14 10:11:58 kali kernel: WARN::hcd_init_fiq:458: FIQ ASM at c07e47f8 length 36
+Feb 14 10:11:58 kali kernel: WARN::hcd_init_fiq:497: MPHI regs_base at f0810200
+Feb 14 10:11:58 kali kernel: dwc_otg fe980000.usb: DWC OTG Controller
+Feb 14 10:11:58 kali kernel: dwc_otg fe980000.usb: new USB bus registered, assigned bus number 3
+Feb 14 10:11:58 kali kernel: dwc_otg fe980000.usb: irq 36, io mem 0x00000000
+Feb 14 10:11:58 kali kernel: Init: Port Power? op_state=1
+Feb 14 10:11:58 kali kernel: Init: Power Port (0)
+Feb 14 10:11:58 kali kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+Feb 14 10:11:58 kali kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Feb 14 10:11:58 kali kernel: usb usb3: Product: DWC OTG Controller
+Feb 14 10:11:58 kali kernel: usb usb3: Manufacturer: Linux 4.19.55-Re4son-v7l+ dwc_otg_hcd
+Feb 14 10:11:58 kali kernel: usb usb3: SerialNumber: fe980000.usb
+Feb 14 10:11:58 kali kernel: hub 3-0:1.0: USB hub found
+Feb 14 10:11:58 kali kernel: hub 3-0:1.0: 1 port detected
+Feb 14 10:11:58 kali kernel: dwc_otg: FIQ enabled
+Feb 14 10:11:58 kali kernel: dwc_otg: NAK holdoff enabled
+Feb 14 10:11:58 kali kernel: dwc_otg: FIQ split-transaction FSM enabled
+Feb 14 10:11:58 kali kernel: Module dwc_common_port init
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver uas
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver usb-storage
+Feb 14 10:11:58 kali kernel: mousedev: PS/2 mouse device common for all mice
+Feb 14 10:11:58 kali kernel: bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+Feb 14 10:11:58 kali kernel: bcm2835-cpufreq: min=600000 max=1500000
+Feb 14 10:11:58 kali kernel: sdhci: Secure Digital Host Controller Interface driver
+Feb 14 10:11:58 kali kernel: sdhci: Copyright(c) Pierre Ossman
+Feb 14 10:11:58 kali kernel: mmc-bcm2835 fe300000.mmcnr: could not get clk, deferring probe
+Feb 14 10:11:58 kali kernel: usb 1-1: new high-speed USB device number 2 using xhci_hcd
+Feb 14 10:11:58 kali kernel: sdhci-pltfm: SDHCI platform and OF driver helper
+Feb 14 10:11:58 kali kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Feb 14 10:11:58 kali kernel: hidraw: raw HID events driver (C) Jiri Kosina
+Feb 14 10:11:58 kali kernel: usbcore: registered new interface driver usbhid
+Feb 14 10:11:58 kali kernel: usbhid: USB HID core driver
+Feb 14 10:11:58 kali kernel: vchiq: vchiq_init_state: slot_zero = (ptrval), is_master = 0
+Feb 14 10:11:58 kali kernel: [vc_sm_connected_init]: start
+Feb 14 10:11:58 kali kernel: [vc_sm_connected_init]: end - returning 0
+Feb 14 10:11:58 kali kernel: bcm2835_vc_sm_cma_probe: Videocore shared memory driver
+Feb 14 10:11:58 kali kernel: [vc_sm_connected_init]: start
+Feb 14 10:11:58 kali kernel: [vc_sm_connected_init]: installed successfully
+Feb 14 10:11:58 kali kernel: Initializing XFRM netlink socket
+Feb 14 10:11:58 kali kernel: NET: Registered protocol family 17
+Feb 14 10:11:58 kali kernel: Key type dns_resolver registered
+Feb 14 10:11:58 kali kernel: Registering SWP/SWPB emulation handler
+Feb 14 10:11:58 kali kernel: registered taskstats version 1
+Feb 14 10:11:58 kali kernel: Loading compiled-in X.509 certificates
+Feb 14 10:11:58 kali kernel: Key type encrypted registered
+Feb 14 10:11:58 kali kernel: uart-pl011 fe201000.serial: cts_event_workaround enabled
+Feb 14 10:11:58 kali kernel: fe201000.serial: ttyAMA0 at MMIO 0xfe201000 (irq = 33, base_baud = 0) is a PL011 rev2
+Feb 14 10:11:58 kali kernel: bcm2835-power bcm2835-power: Broadcom BCM2835 power domains driver
+Feb 14 10:11:58 kali kernel: brcmstb_thermal fd5d2200.thermal: registered AVS TMON of-sensor driver
+Feb 14 10:11:58 kali kernel: mmc-bcm2835 fe300000.mmcnr: mmc_debug:0 mmc_debug2:0
+Feb 14 10:11:58 kali kernel: mmc-bcm2835 fe300000.mmcnr: DMA channel allocated
+Feb 14 10:11:58 kali kernel: sdhci-iproc fe340000.emmc2: Linked as a consumer to regulator.1
+Feb 14 10:11:58 kali kernel: mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+Feb 14 10:11:58 kali kernel: mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+Feb 14 10:11:58 kali kernel: mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+Feb 14 10:11:58 kali kernel: mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+Feb 14 10:11:58 kali kernel: mmc0: SDHCI controller on fe340000.emmc2 [fe340000.emmc2] using ADMA
+Feb 14 10:11:58 kali kernel: of_cfs_init
+Feb 14 10:11:58 kali kernel: of_cfs_init: OK
+Feb 14 10:11:58 kali kernel: Waiting for root device /dev/mmcblk0p7...
+Feb 14 10:11:58 kali kernel: random: fast init done
+Feb 14 10:11:58 kali kernel: usb 1-1: New USB device found, idVendor=2109, idProduct=3431, bcdDevice= 4.20
+Feb 14 10:11:58 kali kernel: usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+Feb 14 10:11:58 kali kernel: usb 1-1: Product: USB2.0 Hub
+Feb 14 10:11:58 kali kernel: hub 1-1:1.0: USB hub found
+Feb 14 10:11:58 kali kernel: hub 1-1:1.0: 4 ports detected
+Feb 14 10:11:58 kali kernel: mmc0: new ultra high speed DDR50 SDHC card at address aaaa
+Feb 14 10:11:58 kali kernel: mmcblk0: mmc0:aaaa SL16G 14.8 GiB
+Feb 14 10:11:58 kali kernel: mmc1: new high speed SDIO card at address 0001
+Feb 14 10:11:58 kali kernel:  mmcblk0: p1 p2 < p5 p6 p7 p8 p9 >
+Feb 14 10:11:58 kali kernel: EXT4-fs (mmcblk0p7): mounted filesystem without journal. Opts: noload
+Feb 14 10:11:58 kali kernel: VFS: Mounted root (ext4 filesystem) readonly on device 179:7.
+Feb 14 10:11:58 kali kernel: devtmpfs: mounted
+Feb 14 10:11:58 kali kernel: Freeing unused kernel memory: 2048K
+Feb 14 10:11:58 kali kernel: Run /sbin/init as init process
+Feb 14 10:11:58 kali kernel: usb 2-1: new SuperSpeed Gen 1 USB device number 2 using xhci_hcd
+Feb 14 10:11:58 kali kernel: usb 2-1: New USB device found, idVendor=0781, idProduct=5581, bcdDevice= 1.00
+Feb 14 10:11:58 kali kernel: usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Feb 14 10:11:58 kali kernel: usb 2-1: Product: Ultra
+Feb 14 10:11:58 kali kernel: usb 2-1: Manufacturer: SanDisk
+Feb 14 10:11:58 kali kernel: usb 2-1: SerialNumber: 4C530001231020101410
+Feb 14 10:11:58 kali kernel: usb-storage 2-1:1.0: USB Mass Storage device detected
+Feb 14 10:11:58 kali kernel: scsi host0: usb-storage 2-1:1.0
+Feb 14 10:11:58 kali kernel: usb 1-1.3: new low-speed USB device number 3 using xhci_hcd
+Feb 14 10:11:58 kali systemd[1]: System time before build time, advancing clock.
+Feb 14 10:11:58 kali kernel: usb 1-1.3: New USB device found, idVendor=0461, idProduct=4d17, bcdDevice= 2.00
+Feb 14 10:11:58 kali kernel: usb 1-1.3: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+Feb 14 10:11:58 kali kernel: usb 1-1.3: Product: USB Optical Mouse
+Feb 14 10:11:58 kali kernel: input: USB Optical Mouse as /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.3/1-1.3:1.0/0003:0461:4D17.0001/input/input0
+Feb 14 10:11:58 kali kernel: hid-generic 0003:0461:4D17.0001: input,hidraw0: USB HID v1.11 Mouse [USB Optical Mouse] on usb-0000:01:00.0-1.3/input0
+Feb 14 10:11:58 kali kernel: NET: Registered protocol family 10
+Feb 14 10:11:58 kali kernel: Segment Routing with IPv6
+Feb 14 10:11:58 kali systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+Feb 14 10:11:58 kali systemd[1]: Detected architecture arm.
+Feb 14 10:11:58 kali kernel: usb 1-1.4: new full-speed USB device number 4 using xhci_hcd
+Feb 14 10:11:58 kali systemd[1]: Set hostname to <kali>.
+Feb 14 10:11:58 kali systemd[1]: Failed to bump fs.file-max, ignoring: Invalid argument
+Feb 14 10:11:58 kali kernel: usb 1-1.4: New USB device found, idVendor=413c, idProduct=2101, bcdDevice= 1.00
+Feb 14 10:11:58 kali kernel: usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Feb 14 10:11:58 kali kernel: usb 1-1.4: Product: Dell Smart Card Reader Keyboard
+Feb 14 10:11:58 kali kernel: usb 1-1.4: Manufacturer: Dell
+Feb 14 10:11:58 kali kernel: input: Dell Dell Smart Card Reader Keyboard as /devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.4/1-1.4:1.0/0003:413C:2101.0002/input/input1
+Feb 14 10:11:58 kali kernel: hid-generic 0003:413C:2101.0002: input,hidraw1: USB HID v1.11 Keyboard [Dell Dell Smart Card Reader Keyboard] on usb-0000:01:00.0-1.4/input0
+Feb 14 10:11:58 kali kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Feb 14 10:11:58 kali kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Feb 14 10:11:58 kali systemd[1]: Created slice User and Session Slice.
+Feb 14 10:11:58 kali kernel: random: systemd: uninitialized urandom read (16 bytes read)
+Feb 14 10:11:58 kali systemd[1]: Reached target Slices.
+Feb 14 10:11:58 kali systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Feb 14 10:11:58 kali systemd[1]: Created slice system-getty.slice.
+Feb 14 10:11:58 kali systemd[1]: Condition check resulted in Journal Audit Socket being skipped.
+Feb 14 10:11:58 kali systemd[1]: Listening on Syslog Socket.
+Feb 14 10:11:58 kali kernel: EXT4-fs (mmcblk0p7): re-mounted. Opts: (null)
+Feb 14 10:11:58 kali kernel: scsi 0:0:0:0: Direct-Access     SanDisk  Ultra            1.00 PQ: 0 ANSI: 6
+Feb 14 10:11:58 kali kernel: sd 0:0:0:0: [sda] 240254976 512-byte logical blocks: (123 GB/115 GiB)
+Feb 14 10:11:58 kali kernel: sd 0:0:0:0: [sda] Write Protect is off
+Feb 14 10:11:58 kali kernel: sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+Feb 14 10:11:58 kali kernel: sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+Feb 14 10:11:58 kali kernel:  sda: sda1
+Feb 14 10:11:58 kali kernel: sd 0:0:0:0: [sda] Attached SCSI removable disk
+Feb 14 10:11:58 kali systemd-journald[146]: Journal started
+-- Subject: The journal has been started
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The system journal process has started up, opened the journal
+-- files for writing and is now ready to process requests.
+Feb 14 10:11:58 kali systemd-journald[146]: Runtime journal (/run/log/journal/f2cdcf82f42a42ada8bb36c040af90c1) is 8.0M, max 195.3M, 187.3M free.
+-- Subject: Disk space used by the journal
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Runtime journal (/run/log/journal/f2cdcf82f42a42ada8bb36c040af90c1) is currently using 8.0M.
+-- Maximum allowed usage is set to 195.3M.
+-- Leaving at least 292.9M free (of currently available 1.8G of disk space).
+-- Enforced usage limit is thus 195.3M, of which 187.3M are still available.
+-- 
+-- The limits controlling how much disk space is used by the journal may
+-- be configured with SystemMaxUse=, SystemKeepFree=, SystemMaxFileSize=,
+-- RuntimeMaxUse=, RuntimeKeepFree=, RuntimeMaxFileSize= settings in
+-- /etc/systemd/journald.conf. See journald.conf(5) for details.
+Feb 14 10:11:58 kali systemd-fsck[138]: root_kali: clean, 277329/609600 files, 1006736/2434047 blocks
+Feb 14 10:11:58 kali systemd[1]: Starting Flush Journal to Persistent Storage...
+-- Subject: A start job for unit systemd-journal-flush.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-journal-flush.service has begun execution.
+-- 
+-- The job identifier is 36.
+Feb 14 10:11:58 kali systemd[1]: Started Load/Save Random Seed.
+-- Subject: A start job for unit systemd-random-seed.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-random-seed.service has finished successfully.
+-- 
+-- The job identifier is 5.
+Feb 14 10:11:58 kali systemd-sysusers[157]: Creating group systemd-coredump with gid 999.
+Feb 14 10:11:58 kali systemd-sysusers[157]: Creating user systemd-coredump (systemd Core Dumper) with uid 999 and gid 999.
+Feb 14 10:11:58 kali systemd[1]: Started udev Coldplug all Devices.
+-- Subject: A start job for unit systemd-udev-trigger.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-udev-trigger.service has finished successfully.
+-- 
+-- The job identifier is 19.
+Feb 14 10:11:58 kali systemd[1]: Starting Helper to synchronize boot up for ifupdown...
+-- Subject: A start job for unit ifupdown-pre.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit ifupdown-pre.service has begun execution.
+-- 
+-- The job identifier is 87.
+Feb 14 10:11:58 kali systemd-journald[146]: Time spent on flushing to /var is 17.007ms for 314 entries.
+Feb 14 10:11:58 kali systemd-journald[146]: System journal (/var/log/journal/f2cdcf82f42a42ada8bb36c040af90c1) is 8.0M, max 923.0M, 915.0M free.
+-- Subject: Disk space used by the journal
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- System journal (/var/log/journal/f2cdcf82f42a42ada8bb36c040af90c1) is currently using 8.0M.
+-- Maximum allowed usage is set to 923.0M.
+-- Leaving at least 1.3G free (of currently available 4.9G of disk space).
+-- Enforced usage limit is thus 923.0M, of which 915.0M are still available.
+-- 
+-- The limits controlling how much disk space is used by the journal may
+-- be configured with SystemMaxUse=, SystemKeepFree=, SystemMaxFileSize=,
+-- RuntimeMaxUse=, RuntimeKeepFree=, RuntimeMaxFileSize= settings in
+-- /etc/systemd/journald.conf. See journald.conf(5) for details.
+Feb 14 10:11:58 kali systemd[1]: Started Create System Users.
+-- Subject: A start job for unit systemd-sysusers.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-sysusers.service has finished successfully.
+-- 
+-- The job identifier is 32.
+Feb 14 10:11:58 kali systemd[1]: Starting Create Static Device Nodes in /dev...
+-- Subject: A start job for unit systemd-tmpfiles-setup-dev.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-setup-dev.service has begun execution.
+-- 
+-- The job identifier is 26.
+Feb 14 10:11:58 kali systemd[1]: Started Flush Journal to Persistent Storage.
+-- Subject: A start job for unit systemd-journal-flush.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-journal-flush.service has finished successfully.
+-- 
+-- The job identifier is 36.
+Feb 14 10:11:58 kali systemd[1]: Started Create Static Device Nodes in /dev.
+-- Subject: A start job for unit systemd-tmpfiles-setup-dev.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-setup-dev.service has finished successfully.
+-- 
+-- The job identifier is 26.
+Feb 14 10:11:59 kali systemd[1]: Starting udev Kernel Device Manager...
+-- Subject: A start job for unit systemd-udevd.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-udevd.service has begun execution.
+-- 
+-- The job identifier is 15.
+Feb 14 10:11:59 kali systemd[1]: Reached target Local File Systems (Pre).
+-- Subject: A start job for unit local-fs-pre.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit local-fs-pre.target has finished successfully.
+-- 
+-- The job identifier is 31.
+Feb 14 10:11:59 kali systemd-udevd[165]: Network interface NamePolicy= disabled on kernel command line, ignoring.
+Feb 14 10:11:59 kali systemd-udevd[165]: Specified group 'spi' unknown
+Feb 14 10:11:59 kali systemd-udevd[165]: Specified group 'gpio' unknown
+Feb 14 10:11:59 kali systemd[1]: Started udev Kernel Device Manager.
+-- Subject: A start job for unit systemd-udevd.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-udevd.service has finished successfully.
+-- 
+-- The job identifier is 15.
+Feb 14 10:11:59 kali kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Feb 14 10:11:59 kali kernel: snd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.
+Feb 14 10:11:59 kali kernel: bcm2835_audio soc:audio: card created with 8 channels
+Feb 14 10:11:59 kali kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Feb 14 10:11:59 kali kernel: cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Feb 14 10:11:59 kali systemd-udevd[172]: Using default interface naming scheme 'v240'.
+Feb 14 10:11:59 kali kernel: platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+Feb 14 10:11:59 kali kernel: cfg80211: failed to load regulatory.db
+Feb 14 10:11:59 kali kernel: argon-mem feb00000.hevc-decoder: argon-hevcmem initialised: Registers at 0xfeb00000 length 0x0000ffff
+Feb 14 10:11:59 kali kernel: argon-mem feb10000.argon-local-intc: argon-intcmem initialised: Registers at 0xfeb10000 length 0x00000fff
+Feb 14 10:11:59 kali kernel: argon-mem feb20000.h264-decoder: argon-h264mem initialised: Registers at 0xfeb20000 length 0x0000ffff
+Feb 14 10:11:59 kali kernel: argon-mem feb30000.vp9-decoder: argon-vp9mem initialised: Registers at 0xfeb30000 length 0x0000ffff
+Feb 14 10:11:59 kali kernel: media: Linux media interface: v0.10
+Feb 14 10:11:59 kali kernel: brcmfmac: F1 signature read @0x18000000=0x15264345
+Feb 14 10:11:59 kali kernel: brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+Feb 14 10:11:59 kali kernel: usbcore: registered new interface driver brcmfmac
+Feb 14 10:11:59 kali kernel: videodev: Linux video capture interface: v2.00
+Feb 14 10:11:59 kali kernel: bcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+Feb 14 10:11:59 kali kernel: bcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+Feb 14 10:11:59 kali kernel: bcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.
+Feb 14 10:11:59 kali kernel: bcm2835_codec: module is from the staging directory, the quality is unknown, you have been warned.
+Feb 14 10:11:59 kali kernel: bcm2835-codec bcm2835-codec: Device registered as /dev/video10
+Feb 14 10:11:59 kali kernel: bcm2835-codec bcm2835-codec: Loaded V4L2 decode
+Feb 14 10:11:59 kali kernel: bcm2835-codec bcm2835-codec: Device registered as /dev/video11
+Feb 14 10:11:59 kali kernel: bcm2835-codec bcm2835-codec: Loaded V4L2 encode
+Feb 14 10:11:59 kali kernel: bcm2835-codec bcm2835-codec: Device registered as /dev/video12
+Feb 14 10:11:59 kali kernel: bcm2835-codec bcm2835-codec: Loaded V4L2 isp
+Feb 14 10:11:59 kali kernel: random: crng init done
+Feb 14 10:11:59 kali kernel: random: 7 urandom warning(s) missed due to ratelimiting
+Feb 14 10:11:59 kali systemd[1]: Found device /dev/mmcblk0p6.
+-- Subject: A start job for unit dev-mmcblk0p6.device has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit dev-mmcblk0p6.device has finished successfully.
+-- 
+-- The job identifier is 47.
+Feb 14 10:11:59 kali systemd[1]: Starting File System Check on /dev/mmcblk0p6...
+-- Subject: A start job for unit systemd-fsck@dev-mmcblk0p6.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-fsck@dev-mmcblk0p6.service has begun execution.
+-- 
+-- The job identifier is 45.
+Feb 14 10:11:59 kali systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+-- Subject: A start job for unit systemd-rfkill.socket has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-rfkill.socket has finished successfully.
+-- 
+-- The job identifier is 102.
+Feb 14 10:11:59 kali systemd[1]: Reached target Sound Card.
+-- Subject: A start job for unit sound.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit sound.target has finished successfully.
+-- 
+-- The job identifier is 100.
+Feb 14 10:11:59 kali systemd-udevd[173]: Process '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.
+Feb 14 10:11:59 kali kernel: brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+Feb 14 10:11:59 kali kernel: brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: Oct  8 2018 09:18:41 version 7.45.154 (nexmon.org: 2.2.2-195-g01e0-1) FWID 01-4fbe0b04
+Feb 14 10:11:59 kali systemd[1]: Starting Load/Save RF Kill Switch Status...
+-- Subject: A start job for unit systemd-rfkill.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-rfkill.service has begun execution.
+-- 
+-- The job identifier is 110.
+Feb 14 10:11:59 kali systemd-udevd[182]: Process '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.
+Feb 14 10:12:00 kali systemd-udevd[176]: Using default interface naming scheme 'v240'.
+Feb 14 10:12:00 kali systemd-fsck[307]: fsck.fat 4.1 (2017-01-24)
+Feb 14 10:12:00 kali systemd-fsck[307]: /dev/mmcblk0p6: 232 files, 27283/62333 clusters
+Feb 14 10:12:00 kali systemd[1]: Started File System Check on /dev/mmcblk0p6.
+-- Subject: A start job for unit systemd-fsck@dev-mmcblk0p6.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-fsck@dev-mmcblk0p6.service has finished successfully.
+-- 
+-- The job identifier is 45.
+Feb 14 10:12:00 kali systemd[1]: Mounting /boot...
+-- Subject: A start job for unit boot.mount has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit boot.mount has begun execution.
+-- 
+-- The job identifier is 44.
+Feb 14 10:12:00 kali systemd[1]: Started Load/Save RF Kill Switch Status.
+-- Subject: A start job for unit systemd-rfkill.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-rfkill.service has finished successfully.
+-- 
+-- The job identifier is 110.
+Feb 14 10:12:00 kali systemd[1]: Mounted /boot.
+-- Subject: A start job for unit boot.mount has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit boot.mount has finished successfully.
+-- 
+-- The job identifier is 44.
+Feb 14 10:12:00 kali systemd[1]: Reached target Local File Systems.
+-- Subject: A start job for unit local-fs.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit local-fs.target has finished successfully.
+-- 
+-- The job identifier is 43.
+Feb 14 10:12:00 kali systemd[1]: Starting Set console font and keymap...
+-- Subject: A start job for unit console-setup.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit console-setup.service has begun execution.
+-- 
+-- The job identifier is 89.
+Feb 14 10:12:00 kali systemd[1]: Condition check resulted in Commit a transient machine-id on disk being skipped.
+-- Subject: A start job for unit systemd-machine-id-commit.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-machine-id-commit.service has finished successfully.
+-- 
+-- The job identifier is 10.
+Feb 14 10:12:00 kali systemd[1]: Starting Create Volatile Files and Directories...
+-- Subject: A start job for unit systemd-tmpfiles-setup.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-setup.service has begun execution.
+-- 
+-- The job identifier is 41.
+Feb 14 10:12:00 kali systemd[1]: Started Create Volatile Files and Directories.
+-- Subject: A start job for unit systemd-tmpfiles-setup.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-setup.service has finished successfully.
+-- 
+-- The job identifier is 41.
+Feb 14 10:12:00 kali systemd[1]: Starting Update UTMP about System Boot/Shutdown...
+-- Subject: A start job for unit systemd-update-utmp.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-update-utmp.service has begun execution.
+-- 
+-- The job identifier is 83.
+Feb 14 10:12:00 kali systemd[1]: Started Entropy daemon using the HAVEGE algorithm.
+-- Subject: A start job for unit haveged.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit haveged.service has finished successfully.
+-- 
+-- The job identifier is 94.
+Feb 14 10:12:00 kali systemd[1]: Starting Network Time Synchronization...
+-- Subject: A start job for unit systemd-timesyncd.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-timesyncd.service has begun execution.
+-- 
+-- The job identifier is 13.
+Feb 14 10:12:00 kali systemd[1]: Started Update UTMP about System Boot/Shutdown.
+-- Subject: A start job for unit systemd-update-utmp.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-update-utmp.service has finished successfully.
+-- 
+-- The job identifier is 83.
+Feb 14 10:12:00 kali systemd-udevd[190]: Process '/usr/sbin/th-cmd --socket /var/run/thd.socket --passfd --udev' failed with exit code 1.
+Feb 14 10:12:00 kali systemd[1]: Started Helper to synchronize boot up for ifupdown.
+-- Subject: A start job for unit ifupdown-pre.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit ifupdown-pre.service has finished successfully.
+-- 
+-- The job identifier is 87.
+Feb 14 10:12:00 kali systemd[1]: Starting Raise network interfaces...
+-- Subject: A start job for unit networking.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit networking.service has begun execution.
+-- 
+-- The job identifier is 86.
+Feb 14 10:12:00 kali systemd[1]: Started Network Time Synchronization.
+-- Subject: A start job for unit systemd-timesyncd.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-timesyncd.service has finished successfully.
+-- 
+-- The job identifier is 13.
+Feb 14 10:12:00 kali systemd[1]: Reached target System Time Synchronized.
+-- Subject: A start job for unit time-sync.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit time-sync.target has finished successfully.
+-- 
+-- The job identifier is 14.
+Feb 14 10:12:00 kali systemd[1]: Reached target System Initialization.
+-- Subject: A start job for unit sysinit.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit sysinit.target has finished successfully.
+-- 
+-- The job identifier is 4.
+Feb 14 10:12:00 kali systemd[1]: Started Daily Cleanup of Temporary Directories.
+-- Subject: A start job for unit systemd-tmpfiles-clean.timer has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-clean.timer has finished successfully.
+-- 
+-- The job identifier is 55.
+Feb 14 10:12:00 kali systemd[1]: Listening on D-Bus System Message Bus Socket.
+-- Subject: A start job for unit dbus.socket has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit dbus.socket has finished successfully.
+-- 
+-- The job identifier is 59.
+Feb 14 10:12:00 kali systemd[1]: Started Daily apt download activities.
+-- Subject: A start job for unit apt-daily.timer has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit apt-daily.timer has finished successfully.
+-- 
+-- The job identifier is 54.
+Feb 14 10:12:00 kali systemd[1]: Started Daily apt upgrade and clean activities.
+-- Subject: A start job for unit apt-daily-upgrade.timer has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit apt-daily-upgrade.timer has finished successfully.
+-- 
+-- The job identifier is 56.
+Feb 14 10:12:00 kali systemd[1]: Reached target Timers.
+-- Subject: A start job for unit timers.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit timers.target has finished successfully.
+-- 
+-- The job identifier is 53.
+Feb 14 10:12:00 kali systemd[1]: Listening on PC/SC Smart Card Daemon Activation Socket.
+-- Subject: A start job for unit pcscd.socket has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit pcscd.socket has finished successfully.
+-- 
+-- The job identifier is 58.
+Feb 14 10:12:00 kali systemd[1]: Reached target Sockets.
+-- Subject: A start job for unit sockets.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit sockets.target has finished successfully.
+-- 
+-- The job identifier is 57.
+Feb 14 10:12:00 kali systemd[1]: Reached target Basic System.
+-- Subject: A start job for unit basic.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit basic.target has finished successfully.
+-- 
+-- The job identifier is 3.
+Feb 14 10:12:00 kali systemd[1]: Starting Configure Bluetooth Modems connected by UART...
+-- Subject: A start job for unit hciuart.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit hciuart.service has begun execution.
+-- 
+-- The job identifier is 84.
+Feb 14 10:12:00 kali systemd[1]: Started Regular background program processing daemon.
+-- Subject: A start job for unit cron.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit cron.service has finished successfully.
+-- 
+-- The job identifier is 88.
+Feb 14 10:12:00 kali dhclient[384]: Internet Systems Consortium DHCP Client 4.4.1
+Feb 14 10:12:00 kali ifup[345]: Internet Systems Consortium DHCP Client 4.4.1
+Feb 14 10:12:00 kali ifup[345]: Copyright 2004-2018 Internet Systems Consortium.
+Feb 14 10:12:00 kali ifup[345]: All rights reserved.
+Feb 14 10:12:00 kali ifup[345]: For info, please visit https://www.isc.org/software/dhcp/
+Feb 14 10:12:00 kali dhclient[384]: Copyright 2004-2018 Internet Systems Consortium.
+Feb 14 10:12:00 kali dhclient[384]: All rights reserved.
+Feb 14 10:12:00 kali dhclient[384]: For info, please visit https://www.isc.org/software/dhcp/
+Feb 14 10:12:00 kali dhclient[384]: 
+Feb 14 10:12:00 kali systemd[1]: Condition check resulted in Copy user wpa_supplicant.conf being skipped.
+-- Subject: A start job for unit copy-user-wpasupplicant.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit copy-user-wpasupplicant.service has finished successfully.
+-- 
+-- The job identifier is 67.
+Feb 14 10:12:00 kali cron[387]: (CRON) INFO (pidfile fd = 3)
+Feb 14 10:12:00 kali systemd[1]: Starting System Logging Service...
+-- Subject: A start job for unit rsyslog.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit rsyslog.service has begun execution.
+-- 
+-- The job identifier is 90.
+Feb 14 10:12:00 kali systemd[1]: Starting Login Service...
+-- Subject: A start job for unit systemd-logind.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-logind.service has begun execution.
+-- 
+-- The job identifier is 63.
+Feb 14 10:12:00 kali systemd[1]: Starting Modem Manager...
+-- Subject: A start job for unit ModemManager.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit ModemManager.service has begun execution.
+-- 
+-- The job identifier is 78.
+Feb 14 10:12:00 kali systemd[1]: Started D-Bus System Message Bus.
+-- Subject: A start job for unit dbus.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit dbus.service has finished successfully.
+-- 
+-- The job identifier is 77.
+Feb 14 10:12:00 kali cron[387]: (CRON) INFO (Running @reboot jobs)
+Feb 14 10:12:00 kali systemd[1]: Starting Network Manager...
+-- Subject: A start job for unit NetworkManager.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit NetworkManager.service has begun execution.
+-- 
+-- The job identifier is 68.
+Feb 14 10:12:00 kali systemd[1]: Condition check resulted in getty on tty2-tty6 if dbus and logind are not available being skipped.
+-- Subject: A start job for unit getty-static.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty-static.service has finished successfully.
+-- 
+-- The job identifier is 71.
+Feb 14 10:12:00 kali systemd[1]: Starting shared-mime-info update hack...
+-- Subject: A start job for unit smi-hack.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit smi-hack.service has begun execution.
+-- 
+-- The job identifier is 66.
+Feb 14 10:12:00 kali systemd[1]: Starting Restore /etc/resolv.conf if the system crashed before the ppp link was shut down...
+-- Subject: A start job for unit pppd-dns.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit pppd-dns.service has begun execution.
+-- 
+-- The job identifier is 81.
+Feb 14 10:12:00 kali systemd-logind[394]: Watching system buttons on /dev/input/event1 (Dell Dell Smart Card Reader Keyboard)
+Feb 14 10:12:00 kali systemd-logind[394]: New seat seat0.
+-- Subject: A new seat seat0 is now available
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new seat seat0 has been configured and is now available.
+Feb 14 10:12:00 kali kernel: uart-pl011 fe201000.serial: no DMA platform data
+Feb 14 10:12:00 kali rsyslogd[391]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.1901.0]
+Feb 14 10:12:00 kali rsyslogd[391]:  [origin software="rsyslogd" swVersion="8.1901.0" x-pid="391" x-info="https://www.rsyslog.com"] start
+Feb 14 10:12:00 kali btuart[386]: Cannot open directory '/etc/firmware': No such file or directory
+Feb 14 10:12:00 kali btuart[386]: Patch not found, continue anyway
+Feb 14 10:12:00 kali kernel: bcmgenet fd580000.genet: configuring instance for external RGMII (no delay)
+Feb 14 10:12:00 kali kernel: IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Feb 14 10:12:00 kali ModemManager[395]: <info>  ModemManager (version 1.10.0) starting in system bus...
+Feb 14 10:12:00 kali dhclient[384]: Listening on LPF/eth0/b8:27:eb:4b:97:a8
+Feb 14 10:12:00 kali ifup[345]: Listening on LPF/eth0/b8:27:eb:4b:97:a8
+Feb 14 10:12:00 kali ifup[345]: Sending on   LPF/eth0/b8:27:eb:4b:97:a8
+Feb 14 10:12:00 kali ifup[345]: Sending on   Socket/fallback
+Feb 14 10:12:00 kali ifup[345]: Created duid "\000\001\000\001#\367\373p\270'\353K\227\250".
+Feb 14 10:12:00 kali ifup[345]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 6
+Feb 14 10:12:00 kali dhclient[384]: Sending on   LPF/eth0/b8:27:eb:4b:97:a8
+Feb 14 10:12:00 kali dhclient[384]: Sending on   Socket/fallback
+Feb 14 10:12:00 kali dhclient[384]: Created duid "\000\001\000\001#\367\373p\270'\353K\227\250".
+Feb 14 10:12:00 kali dhclient[384]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 6
+Feb 14 10:12:00 kali kernel: Bluetooth: Core ver 2.22
+Feb 14 10:12:00 kali kernel: NET: Registered protocol family 31
+Feb 14 10:12:00 kali kernel: Bluetooth: HCI device and connection manager initialized
+Feb 14 10:12:00 kali kernel: Bluetooth: HCI socket layer initialized
+Feb 14 10:12:00 kali kernel: Bluetooth: L2CAP socket layer initialized
+Feb 14 10:12:00 kali kernel: Bluetooth: SCO socket layer initialized
+Feb 14 10:12:00 kali kernel: Bluetooth: HCI UART driver ver 2.3
+Feb 14 10:12:00 kali kernel: Bluetooth: HCI UART protocol H4 registered
+Feb 14 10:12:00 kali kernel: Bluetooth: HCI UART protocol Three-wire (H5) registered
+Feb 14 10:12:00 kali kernel: Bluetooth: HCI UART protocol Broadcom registered
+Feb 14 10:12:00 kali btuart[386]: bcm43xx_init
+Feb 14 10:12:00 kali btuart[386]: Set BDADDR UART: b8:27:eb:e1:3d:02
+Feb 14 10:12:00 kali btuart[386]: Set Controller UART speed to 3000000 bit/s
+Feb 14 10:12:00 kali btuart[386]: Device setup complete
+Feb 14 10:12:00 kali systemd[1]: Started System Logging Service.
+-- Subject: A start job for unit rsyslog.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit rsyslog.service has finished successfully.
+-- 
+-- The job identifier is 90.
+Feb 14 10:12:00 kali systemd[1]: Started Configure Bluetooth Modems connected by UART.
+-- Subject: A start job for unit hciuart.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit hciuart.service has finished successfully.
+-- 
+-- The job identifier is 84.
+Feb 14 10:12:00 kali systemd[1]: pppd-dns.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit pppd-dns.service has successfully entered the 'dead' state.
+Feb 14 10:12:00 kali systemd[1]: Started Restore /etc/resolv.conf if the system crashed before the ppp link was shut down.
+-- Subject: A start job for unit pppd-dns.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit pppd-dns.service has finished successfully.
+-- 
+-- The job identifier is 81.
+Feb 14 10:12:00 kali dbus-daemon[396]: [system] Activating via systemd: service name='org.freedesktop.PolicyKit1' unit='polkit.service' requested by ':1.3' (uid=0 pid=395 comm="/usr/sbin/ModemManager --filter-policy=strict ")
+Feb 14 10:12:00 kali systemd[1]: Started Login Service.
+-- Subject: A start job for unit systemd-logind.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-logind.service has finished successfully.
+-- 
+-- The job identifier is 63.
+Feb 14 10:12:00 kali systemd[1]: Starting Authorization Manager...
+-- Subject: A start job for unit polkit.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit polkit.service has begun execution.
+-- 
+-- The job identifier is 127.
+Feb 14 10:12:00 kali systemd[1]: Reached target Bluetooth.
+-- Subject: A start job for unit bluetooth.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit bluetooth.target has finished successfully.
+-- 
+-- The job identifier is 125.
+Feb 14 10:12:00 kali polkitd[444]: started daemon version 0.105 using authority implementation `local' version `0.105'
+Feb 14 10:12:00 kali dbus-daemon[396]: [system] Successfully activated service 'org.freedesktop.PolicyKit1'
+Feb 14 10:12:00 kali systemd[1]: Started Authorization Manager.
+-- Subject: A start job for unit polkit.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit polkit.service has finished successfully.
+-- 
+-- The job identifier is 127.
+Feb 14 10:12:00 kali NetworkManager[407]: <info>  [1550139120.9904] NetworkManager (version 1.14.6) is starting... (for the first time)
+Feb 14 10:12:00 kali NetworkManager[407]: <info>  [1550139120.9905] Read config: /etc/NetworkManager/NetworkManager.conf (lib: no-mac-addr-change.conf)
+Feb 14 10:12:00 kali NetworkManager[407]: <info>  [1550139120.9924] wifi-nl80211: (wlan0): using nl80211 for WiFi device control
+Feb 14 10:12:01 kali systemd[1]: Started Network Manager.
+-- Subject: A start job for unit NetworkManager.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit NetworkManager.service has finished successfully.
+-- 
+-- The job identifier is 68.
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.0068] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.0145] manager[0xf70010]: monitoring kernel firmware directory '/lib/firmware'.
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.0146] monitoring ifupdown state file '/run/network/ifstate'.
+Feb 14 10:12:01 kali dbus-daemon[396]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.5' (uid=0 pid=407 comm="/usr/sbin/NetworkManager --no-daemon ")
+Feb 14 10:12:01 kali systemd[1]: Starting Hostname Service...
+-- Subject: A start job for unit systemd-hostnamed.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-hostnamed.service has begun execution.
+-- 
+-- The job identifier is 184.
+Feb 14 10:12:01 kali systemd[1]: Started Modem Manager.
+-- Subject: A start job for unit ModemManager.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit ModemManager.service has finished successfully.
+-- 
+-- The job identifier is 78.
+Feb 14 10:12:01 kali dbus-daemon[396]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Feb 14 10:12:01 kali systemd[1]: Started Hostname Service.
+-- Subject: A start job for unit systemd-hostnamed.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-hostnamed.service has finished successfully.
+-- 
+-- The job identifier is 184.
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.3457] hostname: hostname: using hostnamed
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.3465] hostname: hostname changed from (none) to "kali"
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.3470] dns-mgr[0xf76800]: init: dns=default, rc-manager=resolvconf
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.3492] rfkill0: found WiFi radio killswitch (at /sys/devices/platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/ieee80211/phy0/rfkill0) (driver brcmfmac)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.3510] manager[0xf70010]: rfkill: WiFi hardware radio set enabled
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.3511] manager[0xf70010]: rfkill: WWAN hardware radio set enabled
+Feb 14 10:12:01 kali dbus-daemon[396]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.5' (uid=0 pid=407 comm="/usr/sbin/NetworkManager --no-daemon ")
+Feb 14 10:12:01 kali systemd[1]: Starting Network Manager Script Dispatcher Service...
+-- Subject: A start job for unit NetworkManager-dispatcher.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit NetworkManager-dispatcher.service has begun execution.
+-- 
+-- The job identifier is 241.
+Feb 14 10:12:01 kali dbus-daemon[396]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Feb 14 10:12:01 kali systemd[1]: Started Network Manager Script Dispatcher Service.
+-- Subject: A start job for unit NetworkManager-dispatcher.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit NetworkManager-dispatcher.service has finished successfully.
+-- 
+-- The job identifier is 241.
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4389] ifupdown:       interface-parser: parsing file /etc/network/interfaces
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4390] ifupdown:       interface-parser: finished parsing file /etc/network/interfaces
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4406] ifupdown: guessed connection type (eth0) = 802-3-ethernet
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4408] ifupdown: update_connection_setting_from_if_block: name:eth0, type:802-3-ethernet, id:Ifupdown (eth0), uuid: 681b428f-beaf-8932-dce4-687ed5bae28e
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4428] ifupdown: management mode: unmanaged
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4429] settings: Loaded settings plugin: SettingsPluginIfupdown ("/usr/lib/arm-linux-gnueabihf/NetworkManager/1.14.6/libnm-settings-plugin-ifupdown.so")
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4429] settings: Loaded settings plugin: NMSKeyfilePlugin (internal)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4447] manager: rfkill: WiFi enabled by radio killswitch; enabled by state file
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4449] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4451] manager: Networking is enabled by state file
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4454] dhcp-init: Using DHCP client 'dhclient'
+Feb 14 10:12:01 kali nm-dispatcher[452]: req:1 'hostname': new request (1 scripts)
+Feb 14 10:12:01 kali nm-dispatcher[452]: req:1 'hostname': start running ordered scripts...
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4572] Loaded device plugin: NMWifiFactory (/usr/lib/arm-linux-gnueabihf/NetworkManager/1.14.6/libnm-device-plugin-wifi.so)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4700] Loaded device plugin: NMWwanFactory (/usr/lib/arm-linux-gnueabihf/NetworkManager/1.14.6/libnm-device-plugin-wwan.so)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4807] Loaded device plugin: NMTeamFactory (/usr/lib/arm-linux-gnueabihf/NetworkManager/1.14.6/libnm-device-plugin-team.so)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4846] Loaded device plugin: NMAtmManager (/usr/lib/arm-linux-gnueabihf/NetworkManager/1.14.6/libnm-device-plugin-adsl.so)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4954] Loaded device plugin: NMBluezManager (/usr/lib/arm-linux-gnueabihf/NetworkManager/1.14.6/libnm-device-plugin-bluetooth.so)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.4990] device (lo): carrier: link connected
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.5000] manager: (lo): new Generic device (/org/freedesktop/NetworkManager/Devices/1)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.5031] manager: (eth0): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.5114] device (wlan0): driver supports Access Point (AP) mode
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.5126] manager: (wlan0): new 802.11 WiFi device (/org/freedesktop/NetworkManager/Devices/3)
+Feb 14 10:12:01 kali NetworkManager[407]: <info>  [1550139121.5148] device (wlan0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Feb 14 10:12:01 kali haveged[334]: haveged: ver: 1.9.1; arch: generic; vend: ; build: (gcc 8.3.0 CTV); collect: 128K
+Feb 14 10:12:01 kali haveged[334]: haveged: cpu: (VC); data: 16K (D); inst: 16K (D); idx: 12/40; sz: 15012/57848
+Feb 14 10:12:01 kali haveged[334]: haveged: tot tests(BA8): A:1/1 B:1/1 continuous tests(B):  last entropy estimate 7.99981
+Feb 14 10:12:01 kali haveged[334]: haveged: fills: 0, generated: 0
+Feb 14 10:12:01 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:12:01 kali kernel: brcmfmac: power management disabled
+Feb 14 10:12:01 kali kernel: bcmgenet fd580000.genet eth0: Link is Down
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.0563] device (wlan0): set-hw-addr: set MAC address to 76:F3:12:16:D8:86 (scanning)
+Feb 14 10:12:02 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:12:02 kali kernel: brcmfmac: power management disabled
+Feb 14 10:12:02 kali nm-dispatcher[452]: req:2 'connectivity-change': new request (1 scripts)
+Feb 14 10:12:02 kali nm-dispatcher[452]: req:2 'connectivity-change': start running ordered scripts...
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.0681] manager: NetworkManager state is now CONNECTED_GLOBAL
+Feb 14 10:12:02 kali dbus-daemon[396]: [system] Activating via systemd: service name='fi.w1.wpa_supplicant1' unit='wpa_supplicant.service' requested by ':1.5' (uid=0 pid=407 comm="/usr/sbin/NetworkManager --no-daemon ")
+Feb 14 10:12:02 kali systemd[1]: Starting WPA supplicant...
+-- Subject: A start job for unit wpa_supplicant.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit wpa_supplicant.service has begun execution.
+-- 
+-- The job identifier is 298.
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.0930] modem-manager: ModemManager available
+Feb 14 10:12:02 kali dbus-daemon[396]: [system] Successfully activated service 'fi.w1.wpa_supplicant1'
+Feb 14 10:12:02 kali systemd[1]: Started WPA supplicant.
+-- Subject: A start job for unit wpa_supplicant.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit wpa_supplicant.service has finished successfully.
+-- 
+-- The job identifier is 298.
+Feb 14 10:12:02 kali wpa_supplicant[475]: Successfully initialized wpa_supplicant
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.2108] supplicant: wpa_supplicant running
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.2113] device (wlan0): supplicant interface state: init -> starting
+Feb 14 10:12:02 kali sh[410]: (Reading database ... 256641 files and directories currently installed.)
+Feb 14 10:12:02 kali sh[410]: Preparing to unpack .../ca-certificates_20190110_all.deb ...
+Feb 14 10:12:02 kali sh[410]: Unpacking ca-certificates (20190110) over (20190110) ...
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.3775] sup-iface[0xf5f8f0,wlan0]: supports 5 scan SSIDs
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.3796] device (wlan0): supplicant interface state: starting -> ready
+Feb 14 10:12:02 kali NetworkManager[407]: <info>  [1550139122.3798] device (wlan0): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')
+Feb 14 10:12:02 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:12:03 kali sh[410]: Preparing to unpack .../fontconfig_2.13.1-2_armhf.deb ...
+Feb 14 10:12:03 kali sh[410]: Unpacking fontconfig (2.13.1-2) over (2.13.1-2) ...
+Feb 14 10:12:03 kali ModemManager[395]: <info>  Couldn't check support for device '/sys/devices/platform/scb/fd580000.genet': not supported by any plugin
+Feb 14 10:12:03 kali ModemManager[395]: <info>  Couldn't check support for device '/sys/devices/platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1': not supported by any plugin
+Feb 14 10:12:03 kali systemd[1]: Started Set console font and keymap.
+-- Subject: A start job for unit console-setup.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit console-setup.service has finished successfully.
+-- 
+-- The job identifier is 89.
+Feb 14 10:12:03 kali sh[410]: Preparing to unpack .../libgdk-pixbuf2.0-0_2.38.1+dfsg-1_armhf.deb ...
+Feb 14 10:12:03 kali sh[410]: Unpacking libgdk-pixbuf2.0-0:armhf (2.38.1+dfsg-1) over (2.38.1+dfsg-1) ...
+Feb 14 10:12:04 kali sh[410]: Setting up ca-certificates (20190110) ...
+Feb 14 10:12:04 kali NetworkManager[407]: <info>  [1550139124.7676] device (eth0): carrier: link connected
+Feb 14 10:12:04 kali kernel: bcmgenet fd580000.genet eth0: Link is Up - 100Mbps/Full - flow control rx/tx
+Feb 14 10:12:04 kali kernel: IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Feb 14 10:12:05 kali NetworkManager[407]: <info>  [1550139125.1133] manager: startup complete
+Feb 14 10:12:05 kali systemd[1]: systemd-rfkill.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit systemd-rfkill.service has successfully entered the 'dead' state.
+Feb 14 10:12:06 kali dhclient[384]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 9
+Feb 14 10:12:06 kali ifup[345]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 9
+Feb 14 10:12:06 kali dhclient[384]: DHCPOFFER of 192.168.3.10 from 192.168.3.3
+Feb 14 10:12:06 kali ifup[345]: DHCPOFFER of 192.168.3.10 from 192.168.3.3
+Feb 14 10:12:06 kali ifup[345]: DHCPREQUEST for 192.168.3.10 on eth0 to 255.255.255.255 port 67
+Feb 14 10:12:06 kali dhclient[384]: DHCPREQUEST for 192.168.3.10 on eth0 to 255.255.255.255 port 67
+Feb 14 10:12:06 kali dhclient[384]: DHCPACK of 192.168.3.10 from 192.168.3.3
+Feb 14 10:12:06 kali ifup[345]: DHCPACK of 192.168.3.10 from 192.168.3.3
+Feb 14 10:12:06 kali dhclient[384]: bound to 192.168.3.10 -- renewal in 65975 seconds.
+Feb 14 10:12:06 kali ifup[345]: bound to 192.168.3.10 -- renewal in 65975 seconds.
+Feb 14 10:12:06 kali systemd[1]: Started Raise network interfaces.
+-- Subject: A start job for unit networking.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit networking.service has finished successfully.
+-- 
+-- The job identifier is 86.
+Feb 14 10:12:06 kali systemd[1]: Reached target Network.
+-- Subject: A start job for unit network.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit network.target has finished successfully.
+-- 
+-- The job identifier is 69.
+Feb 14 10:12:06 kali systemd[1]: Starting Permit User Sessions...
+-- Subject: A start job for unit systemd-user-sessions.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-user-sessions.service has begun execution.
+-- 
+-- The job identifier is 80.
+Feb 14 10:12:06 kali systemd[1]: Started Permit User Sessions.
+-- Subject: A start job for unit systemd-user-sessions.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-user-sessions.service has finished successfully.
+-- 
+-- The job identifier is 80.
+Feb 14 10:12:06 kali systemd[1]: Started Getty on tty1.
+-- Subject: A start job for unit getty@tty1.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty@tty1.service has finished successfully.
+-- 
+-- The job identifier is 72.
+Feb 14 10:12:06 kali systemd[1]: Reached target Login Prompts.
+-- Subject: A start job for unit getty.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty.target has finished successfully.
+-- 
+-- The job identifier is 70.
+Feb 14 10:12:06 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 92.
+Feb 14 10:12:06 kali lightdm[1729]: Could not enumerate user data directory /var/lib/lightdm/data: Error opening directory '/var/lib/lightdm/data': No such file or directory
+Feb 14 10:12:06 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 92.
+Feb 14 10:12:08 kali lightdm[2535]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:08 kali lightdm[1729]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:08 kali lightdm[2535]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:08 kali systemd-logind[394]: New session c1 of user lightdm.
+-- Subject: A new session c1 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c1 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 2535.
+Feb 14 10:12:08 kali systemd[1]: Created slice User Slice of UID 113.
+-- Subject: A start job for unit user-113.slice has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user-113.slice has finished successfully.
+-- 
+-- The job identifier is 413.
+Feb 14 10:12:08 kali systemd[1]: Starting User Runtime Directory /run/user/113...
+-- Subject: A start job for unit user-runtime-dir@113.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user-runtime-dir@113.service has begun execution.
+-- 
+-- The job identifier is 357.
+Feb 14 10:12:08 kali systemd[1]: Started User Runtime Directory /run/user/113.
+-- Subject: A start job for unit user-runtime-dir@113.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user-runtime-dir@113.service has finished successfully.
+-- 
+-- The job identifier is 357.
+Feb 14 10:12:08 kali systemd[1]: Starting User Manager for UID 113...
+-- Subject: A start job for unit user@113.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user@113.service has begun execution.
+-- 
+-- The job identifier is 356.
+Feb 14 10:12:08 kali systemd[2580]: pam_unix(systemd-user:account): account lightdm has password changed in future
+Feb 14 10:12:08 kali systemd[2580]: pam_unix(systemd-user:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:08 kali systemd[2580]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 11.
+Feb 14 10:12:08 kali systemd[2580]: Reached target Paths.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 5.
+Feb 14 10:12:08 kali systemd[2580]: Listening on Sound System.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 14.
+Feb 14 10:12:08 kali systemd[2580]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 13.
+Feb 14 10:12:08 kali systemd[2580]: Listening on GnuPG network certificate management daemon.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 12.
+Feb 14 10:12:08 kali systemd[2580]: Listening on GnuPG cryptographic agent and passphrase cache.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 9.
+Feb 14 10:12:08 kali systemd[2580]: Reached target Timers.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 3.
+Feb 14 10:12:08 kali systemd[2580]: Starting D-Bus User Message Bus Socket.
+-- Subject: A start job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 10.
+Feb 14 10:12:08 kali systemd[2580]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 7.
+Feb 14 10:12:08 kali systemd[2580]: Listening on D-Bus User Message Bus Socket.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 10.
+Feb 14 10:12:08 kali systemd[2580]: Reached target Sockets.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 6.
+Feb 14 10:12:08 kali systemd[2580]: Reached target Basic System.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 2.
+Feb 14 10:12:08 kali systemd[2580]: Reached target Default.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 1.
+Feb 14 10:12:08 kali systemd[2580]: Startup finished in 268ms.
+-- Subject: User manager start-up is now complete
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The user manager instance for user 113 has been started. All services queued
+-- for starting have been started. Note that other services might still be starting
+-- up or be started at any later time.
+-- 
+-- Startup of the manager took 268220 microseconds.
+Feb 14 10:12:08 kali systemd[1]: Started User Manager for UID 113.
+-- Subject: A start job for unit user@113.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user@113.service has finished successfully.
+-- 
+-- The job identifier is 356.
+Feb 14 10:12:08 kali systemd[1]: Started Session c1 of user lightdm.
+-- Subject: A start job for unit session-c1.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c1.scope has finished successfully.
+-- 
+-- The job identifier is 415.
+Feb 14 10:12:09 kali sh[410]: Updating certificates in /etc/ssl/certs...
+Feb 14 10:12:09 kali systemd[2580]: Started D-Bus User Message Bus.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 15.
+Feb 14 10:12:09 kali dbus-daemon[3298]: [session uid=113 pid=3298] Activating systemd to hand-off: service name='org.a11y.Bus' unit='at-spi-dbus-bus.service' requested by ':1.0' (uid=113 pid=2842 comm="/usr/sbin/lightdm-gtk-greeter ")
+Feb 14 10:12:09 kali dbus-daemon[3298]: [session uid=113 pid=3298] Successfully activated service 'org.freedesktop.systemd1'
+Feb 14 10:12:09 kali systemd[2580]: Starting Accessibility services bus...
+-- Subject: A start job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 29.
+Feb 14 10:12:09 kali dbus-daemon[3298]: [session uid=113 pid=3298] Successfully activated service 'org.a11y.Bus'
+Feb 14 10:12:09 kali systemd[2580]: Started Accessibility services bus.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 29.
+Feb 14 10:12:09 kali at-spi-bus-launcher[3314]: dbus-daemon[3334]: Activating service name='org.a11y.atspi.Registry' requested by ':1.0' (uid=113 pid=2842 comm="/usr/sbin/lightdm-gtk-greeter ")
+Feb 14 10:12:09 kali at-spi-bus-launcher[3314]: dbus-daemon[3334]: Successfully activated service 'org.a11y.atspi.Registry'
+Feb 14 10:12:09 kali at-spi-bus-launcher[3314]: SpiRegistry daemon is running with well-known name - org.a11y.atspi.Registry
+Feb 14 10:12:09 kali dbus-daemon[3298]: [session uid=113 pid=3298] Activating via systemd: service name='org.gtk.vfs.Daemon' unit='gvfs-daemon.service' requested by ':1.5' (uid=113 pid=2842 comm="/usr/sbin/lightdm-gtk-greeter ")
+Feb 14 10:12:09 kali systemd[2580]: Starting Virtual filesystem service...
+-- Subject: A start job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 43.
+Feb 14 10:12:09 kali dbus-daemon[3298]: [session uid=113 pid=3298] Successfully activated service 'org.gtk.vfs.Daemon'
+Feb 14 10:12:09 kali systemd[2580]: Started Virtual filesystem service.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 43.
+Feb 14 10:12:10 kali sh[410]: 128 added, 0 removed; done.
+Feb 14 10:12:11 kali sh[410]: Setting up fontconfig (2.13.1-2) ...
+Feb 14 10:12:12 kali systemd[1]: NetworkManager-dispatcher.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit NetworkManager-dispatcher.service has successfully entered the 'dead' state.
+Feb 14 10:12:14 kali lightdm[2535]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:14 kali systemd-logind[394]: Session c1 logged out. Waiting for processes to exit.
+Feb 14 10:12:14 kali systemd[1]: session-c1.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c1.scope has successfully entered the 'dead' state.
+Feb 14 10:12:14 kali systemd-logind[394]: Removed session c1.
+-- Subject: Session c1 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c1 has been terminated.
+Feb 14 10:12:14 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:14 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:14 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:14 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 1.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:14 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 475 and the job result is done.
+Feb 14 10:12:14 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 475.
+Feb 14 10:12:14 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 475.
+Feb 14 10:12:14 kali lightdm[4085]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:14 kali lightdm[4101]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:14 kali lightdm[4101]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:14 kali systemd-logind[394]: New session c2 of user lightdm.
+-- Subject: A new session c2 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c2 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 4101.
+Feb 14 10:12:15 kali systemd[1]: Started Session c2 of user lightdm.
+-- Subject: A start job for unit session-c2.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c2.scope has finished successfully.
+-- 
+-- The job identifier is 533.
+Feb 14 10:12:15 kali lightdm[4101]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:15 kali systemd[1]: session-c2.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c2.scope has successfully entered the 'dead' state.
+Feb 14 10:12:15 kali systemd-logind[394]: Session c2 logged out. Waiting for processes to exit.
+Feb 14 10:12:15 kali systemd-logind[394]: Removed session c2.
+-- Subject: Session c2 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c2 has been terminated.
+Feb 14 10:12:15 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:15 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:16 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:16 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 2.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:16 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 593 and the job result is done.
+Feb 14 10:12:16 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 593.
+Feb 14 10:12:16 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 593.
+Feb 14 10:12:16 kali lightdm[4127]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:16 kali lightdm[4143]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:16 kali lightdm[4143]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:16 kali systemd-logind[394]: New session c3 of user lightdm.
+-- Subject: A new session c3 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c3 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 4143.
+Feb 14 10:12:16 kali systemd[1]: Started Session c3 of user lightdm.
+-- Subject: A start job for unit session-c3.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c3.scope has finished successfully.
+-- 
+-- The job identifier is 651.
+Feb 14 10:12:17 kali lightdm[4143]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:17 kali systemd[1]: session-c3.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c3.scope has successfully entered the 'dead' state.
+Feb 14 10:12:17 kali systemd-logind[394]: Session c3 logged out. Waiting for processes to exit.
+Feb 14 10:12:17 kali systemd-logind[394]: Removed session c3.
+-- Subject: Session c3 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c3 has been terminated.
+Feb 14 10:12:17 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:17 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:17 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:17 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 3.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:17 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 711 and the job result is done.
+Feb 14 10:12:17 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 711.
+Feb 14 10:12:17 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 711.
+Feb 14 10:12:17 kali lightdm[4169]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:18 kali lightdm[4185]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:18 kali lightdm[4185]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:18 kali systemd-logind[394]: New session c4 of user lightdm.
+-- Subject: A new session c4 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c4 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 4185.
+Feb 14 10:12:18 kali systemd[1]: Started Session c4 of user lightdm.
+-- Subject: A start job for unit session-c4.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c4.scope has finished successfully.
+-- 
+-- The job identifier is 769.
+Feb 14 10:12:18 kali lightdm[4185]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:18 kali systemd[1]: session-c4.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c4.scope has successfully entered the 'dead' state.
+Feb 14 10:12:18 kali systemd-logind[394]: Session c4 logged out. Waiting for processes to exit.
+Feb 14 10:12:18 kali systemd-logind[394]: Removed session c4.
+-- Subject: Session c4 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c4 has been terminated.
+Feb 14 10:12:19 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:19 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:19 kali sh[410]: Regenerating fonts cache... done.
+Feb 14 10:12:19 kali sh[410]: Setting up libgdk-pixbuf2.0-0:armhf (2.38.1+dfsg-1) ...
+Feb 14 10:12:19 kali sh[410]: Processing triggers for man-db (2.8.5-2) ...
+Feb 14 10:12:19 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:19 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 4.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:19 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 829 and the job result is done.
+Feb 14 10:12:19 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 829.
+Feb 14 10:12:19 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 829.
+Feb 14 10:12:19 kali lightdm[4218]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:19 kali sh[410]: Processing triggers for libc-bin (2.28-8) ...
+Feb 14 10:12:19 kali lightdm[4236]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:19 kali lightdm[4236]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:19 kali systemd-logind[394]: New session c5 of user lightdm.
+-- Subject: A new session c5 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c5 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 4236.
+Feb 14 10:12:19 kali systemd[1]: Started Session c5 of user lightdm.
+-- Subject: A start job for unit session-c5.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c5.scope has finished successfully.
+-- 
+-- The job identifier is 887.
+Feb 14 10:12:20 kali lightdm[4236]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:20 kali systemd[1]: session-c5.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c5.scope has successfully entered the 'dead' state.
+Feb 14 10:12:20 kali systemd-logind[394]: Session c5 logged out. Waiting for processes to exit.
+Feb 14 10:12:20 kali systemd-logind[394]: Removed session c5.
+-- Subject: Session c5 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c5 has been terminated.
+Feb 14 10:12:20 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:20 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:20 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:20 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 5.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:20 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 947 and the job result is done.
+Feb 14 10:12:20 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 947.
+Feb 14 10:12:20 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 947.
+Feb 14 10:12:20 kali lightdm[4262]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:21 kali sh[410]: Processing triggers for ca-certificates (20190110) ...
+Feb 14 10:12:21 kali sh[410]: Updating certificates in /etc/ssl/certs...
+Feb 14 10:12:21 kali lightdm[4332]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:21 kali lightdm[4332]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:21 kali systemd-logind[394]: New session c6 of user lightdm.
+-- Subject: A new session c6 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c6 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 4332.
+Feb 14 10:12:21 kali systemd[1]: Started Session c6 of user lightdm.
+-- Subject: A start job for unit session-c6.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c6.scope has finished successfully.
+-- 
+-- The job identifier is 1005.
+Feb 14 10:12:22 kali lightdm[4332]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:22 kali systemd[1]: session-c6.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c6.scope has successfully entered the 'dead' state.
+Feb 14 10:12:22 kali systemd-logind[394]: Session c6 logged out. Waiting for processes to exit.
+Feb 14 10:12:22 kali systemd-logind[394]: Removed session c6.
+-- Subject: Session c6 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c6 has been terminated.
+Feb 14 10:12:22 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:22 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:22 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:22 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 6.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:22 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 1065 and the job result is done.
+Feb 14 10:12:22 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 1065.
+Feb 14 10:12:22 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 1065.
+Feb 14 10:12:22 kali lightdm[4936]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:22 kali sh[410]: 0 added, 0 removed; done.
+Feb 14 10:12:22 kali sh[410]: Running hooks in /etc/ca-certificates/update.d...
+Feb 14 10:12:22 kali sh[410]: done.
+Feb 14 10:12:23 kali lightdm[4986]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:23 kali lightdm[4986]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:23 kali systemd-logind[394]: New session c7 of user lightdm.
+-- Subject: A new session c7 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c7 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 4986.
+Feb 14 10:12:23 kali systemd[1]: Started Session c7 of user lightdm.
+-- Subject: A start job for unit session-c7.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c7.scope has finished successfully.
+-- 
+-- The job identifier is 1123.
+Feb 14 10:12:23 kali lightdm[4986]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:23 kali systemd[1]: session-c7.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c7.scope has successfully entered the 'dead' state.
+Feb 14 10:12:23 kali systemd-logind[394]: Session c7 logged out. Waiting for processes to exit.
+Feb 14 10:12:23 kali systemd-logind[394]: Removed session c7.
+-- Subject: Session c7 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c7 has been terminated.
+Feb 14 10:12:23 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:23 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:24 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:24 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 7.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:24 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 1183 and the job result is done.
+Feb 14 10:12:24 kali systemd[1]: Starting Light Display Manager...
+-- Subject: A start job for unit lightdm.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has begun execution.
+-- 
+-- The job identifier is 1183.
+Feb 14 10:12:24 kali systemd[1]: Started Light Display Manager.
+-- Subject: A start job for unit lightdm.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished successfully.
+-- 
+-- The job identifier is 1183.
+Feb 14 10:12:24 kali lightdm[5018]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:24 kali lightdm[5034]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
+Feb 14 10:12:24 kali lightdm[5034]: pam_unix(lightdm-greeter:session): session opened for user lightdm by (uid=0)
+Feb 14 10:12:24 kali systemd-logind[394]: New session c8 of user lightdm.
+-- Subject: A new session c8 has been created for user lightdm
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c8 has been created for the user lightdm.
+-- 
+-- The leading process of the session is 5034.
+Feb 14 10:12:24 kali systemd[1]: Started Session c8 of user lightdm.
+-- Subject: A start job for unit session-c8.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c8.scope has finished successfully.
+-- 
+-- The job identifier is 1241.
+Feb 14 10:12:25 kali lightdm[5034]: pam_unix(lightdm-greeter:session): session closed for user lightdm
+Feb 14 10:12:25 kali systemd[1]: session-c8.scope: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit session-c8.scope has successfully entered the 'dead' state.
+Feb 14 10:12:25 kali systemd-logind[394]: Session c8 logged out. Waiting for processes to exit.
+Feb 14 10:12:25 kali systemd-logind[394]: Removed session c8.
+-- Subject: Session c8 has been terminated
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A session with the ID c8 has been terminated.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Main process exited, code=exited, status=1/FAILURE
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit lightdm.service has exited.
+-- 
+-- The process' exit code is 'exited' and its exit status is 1.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Service RestartSec=100ms expired, scheduling restart.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Scheduled restart job, restart counter is at 8.
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- Automatic restarting of the unit lightdm.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Feb 14 10:12:25 kali systemd[1]: Stopped Light Display Manager.
+-- Subject: A stop job for unit lightdm.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit lightdm.service has finished.
+-- 
+-- The job identifier is 1301 and the job result is done.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Start request repeated too quickly.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Failed with result 'exit-code'.
+-- Subject: Unit failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit lightdm.service has entered the 'failed' state with result 'exit-code'.
+Feb 14 10:12:25 kali systemd[1]: Failed to start Light Display Manager.
+-- Subject: A start job for unit lightdm.service has failed
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit lightdm.service has finished with a failure.
+-- 
+-- The job identifier is 1301 and the job result is failed.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Triggering OnFailure= dependencies.
+Feb 14 10:12:25 kali systemd[1]: lightdm.service: Failed to enqueue OnFailure= job, ignoring: Unit plymouth-quit.service not found.
+Feb 14 10:12:28 kali systemctl[5061]: Removed /etc/systemd/system/multi-user.target.wants/smi-hack.service.
+Feb 14 10:12:28 kali systemd[1]: Reloading.
+Feb 14 10:12:29 kali systemd[1]: getty@tty1.service: Current command vanished from the unit file, execution of the command list won't be resumed.
+Feb 14 10:12:29 kali systemd[1]: smi-hack.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit smi-hack.service has successfully entered the 'dead' state.
+Feb 14 10:12:29 kali systemd[1]: Started shared-mime-info update hack.
+-- Subject: A start job for unit smi-hack.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit smi-hack.service has finished successfully.
+-- 
+-- The job identifier is 66.
+Feb 14 10:12:29 kali systemd[1]: Starting Regenerate SSH host keys...
+-- Subject: A start job for unit regenerate_ssh_host_keys.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit regenerate_ssh_host_keys.service has begun execution.
+-- 
+-- The job identifier is 79.
+Feb 14 10:12:29 kali dd[5091]: 1+0 records in
+Feb 14 10:12:29 kali dd[5091]: 1+0 records out
+Feb 14 10:12:29 kali dd[5091]: 4096 bytes (4.1 kB, 4.0 KiB) copied, 0.0563251 s, 72.7 kB/s
+Feb 14 10:12:29 kali sh[5092]: removed '/etc/ssh/ssh_host_ecdsa_key'
+Feb 14 10:12:29 kali sh[5092]: removed '/etc/ssh/ssh_host_ecdsa_key.pub'
+Feb 14 10:12:29 kali sh[5092]: removed '/etc/ssh/ssh_host_ed25519_key'
+Feb 14 10:12:29 kali sh[5092]: removed '/etc/ssh/ssh_host_ed25519_key.pub'
+Feb 14 10:12:29 kali sh[5092]: removed '/etc/ssh/ssh_host_rsa_key'
+Feb 14 10:12:29 kali sh[5092]: removed '/etc/ssh/ssh_host_rsa_key.pub'
+Feb 14 10:12:30 kali systemd[1]: systemd-fsckd.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit systemd-fsckd.service has successfully entered the 'dead' state.
+Feb 14 10:12:31 kali systemd[1]: systemd-hostnamed.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit systemd-hostnamed.service has successfully entered the 'dead' state.
+Feb 14 10:12:32 kali ssh-keygen[5094]: ssh-keygen: generating new host keys: RSA DSA ECDSA ED25519
+Feb 14 10:12:32 kali sh[5098]: Removed /etc/systemd/system/multi-user.target.wants/regenerate_ssh_host_keys.service.
+Feb 14 10:12:32 kali systemd[1]: Reloading.
+Feb 14 10:12:33 kali systemd[1]: regenerate_ssh_host_keys.service: Current command vanished from the unit file, execution of the command list won't be resumed.
+Feb 14 10:12:33 kali systemd[1]: regenerate_ssh_host_keys.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit regenerate_ssh_host_keys.service has successfully entered the 'dead' state.
+Feb 14 10:12:33 kali systemd[1]: Started Regenerate SSH host keys.
+-- Subject: A start job for unit regenerate_ssh_host_keys.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit regenerate_ssh_host_keys.service has finished successfully.
+-- 
+-- The job identifier is 79.
+Feb 14 10:12:33 kali systemd[1]: Starting Turn on SSH if /boot/ssh is present...
+-- Subject: A start job for unit enable-ssh.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit enable-ssh.service has begun execution.
+-- 
+-- The job identifier is 85.
+Feb 14 10:12:33 kali systemd[1]: Reloading.
+Feb 14 10:12:33 kali systemd[1]: enable-ssh.service: Current command vanished from the unit file, execution of the command list won't be resumed.
+Feb 14 10:12:33 kali systemd[1]: Reloading.
+Feb 14 10:12:34 kali systemd[1]: Starting OpenBSD Secure Shell server...
+-- Subject: A start job for unit ssh.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit ssh.service has begun execution.
+-- 
+-- The job identifier is 1359.
+Feb 14 10:12:34 kali sshd[5195]: Server listening on 0.0.0.0 port 22.
+Feb 14 10:12:34 kali sshd[5195]: Server listening on :: port 22.
+Feb 14 10:12:34 kali systemd[1]: Started OpenBSD Secure Shell server.
+-- Subject: A start job for unit ssh.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit ssh.service has finished successfully.
+-- 
+-- The job identifier is 1359.
+Feb 14 10:12:34 kali systemd[1]: enable-ssh.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit enable-ssh.service has successfully entered the 'dead' state.
+Feb 14 10:12:34 kali systemd[1]: Started Turn on SSH if /boot/ssh is present.
+-- Subject: A start job for unit enable-ssh.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit enable-ssh.service has finished successfully.
+-- 
+-- The job identifier is 85.
+Feb 14 10:12:34 kali systemd[1]: Reached target Multi-User System.
+-- Subject: A start job for unit multi-user.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit multi-user.target has finished successfully.
+-- 
+-- The job identifier is 2.
+Feb 14 10:12:34 kali systemd[1]: Reached target Graphical Interface.
+-- Subject: A start job for unit graphical.target has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit graphical.target has finished successfully.
+-- 
+-- The job identifier is 1.
+Feb 14 10:12:34 kali systemd[1]: Starting Update UTMP about System Runlevel Changes...
+-- Subject: A start job for unit systemd-update-utmp-runlevel.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-update-utmp-runlevel.service has begun execution.
+-- 
+-- The job identifier is 82.
+Feb 14 10:12:34 kali systemd[1]: systemd-update-utmp-runlevel.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit systemd-update-utmp-runlevel.service has successfully entered the 'dead' state.
+Feb 14 10:12:34 kali systemd[1]: Started Update UTMP about System Runlevel Changes.
+-- Subject: A start job for unit systemd-update-utmp-runlevel.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-update-utmp-runlevel.service has finished successfully.
+-- 
+-- The job identifier is 82.
+Feb 14 10:12:34 kali systemd[1]: Startup finished in 1.604s (kernel) + 36.521s (userspace) = 38.126s.
+-- Subject: System start-up is now complete
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- All system services necessary queued for starting at boot have been
+-- started. Note that this does not mean that the machine is now idle as services
+-- might still be busy with completing start-up.
+-- 
+-- Kernel start-up required 1604757 microseconds.
+-- 
+-- Initial RAM disk start-up required INITRD_USEC microseconds.
+-- 
+-- Userspace start-up required 36521793 microseconds.
+Feb 14 10:12:35 kali systemd[1]: Stopping User Manager for UID 113...
+-- Subject: A stop job for unit user@113.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit user@113.service has begun execution.
+-- 
+-- The job identifier is 1360.
+Feb 14 10:12:35 kali systemd[2580]: Stopped target Default.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 73 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: Stopping Accessibility services bus...
+-- Subject: A stop job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 67.
+Feb 14 10:12:35 kali gvfsd[3369]: A connection to the bus can't be made
+Feb 14 10:12:35 kali systemd[2580]: Stopping D-Bus User Message Bus...
+-- Subject: A stop job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 68.
+Feb 14 10:12:35 kali systemd[2580]: Stopping Virtual filesystem service...
+-- Subject: A stop job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 69.
+Feb 14 10:12:35 kali systemd[2580]: gvfs-daemon.service: Main process exited, code=killed, status=15/TERM
+-- Subject: Unit process exited
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- An ExecStart= process belonging to unit UNIT has exited.
+-- 
+-- The process' exit code is 'killed' and its exit status is 15.
+Feb 14 10:12:35 kali systemd[2580]: gvfs-daemon.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Stopped Virtual filesystem service.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 69 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: dbus.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Stopped D-Bus User Message Bus.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 68 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: at-spi-dbus-bus.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Stopped Accessibility services bus.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 67 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: Stopped target Basic System.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 72 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: Stopped target Sockets.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 75 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: gpg-agent-ssh.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 71 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: dirmngr.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed GnuPG network certificate management daemon.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 63 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: gpg-agent-browser.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 60 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: pulseaudio.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed Sound System.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 77 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: gpg-agent.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed GnuPG cryptographic agent and passphrase cache.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 61 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: gpg-agent-extra.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 65 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: Stopped target Paths.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 76 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: Stopped target Timers.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 70 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: dbus.socket: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Closed D-Bus User Message Bus Socket.
+-- Subject: A stop job for unit UNIT has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit UNIT has finished.
+-- 
+-- The job identifier is 66 and the job result is done.
+Feb 14 10:12:35 kali systemd[2580]: Reached target Shutdown.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 59.
+Feb 14 10:12:35 kali systemd[2580]: systemd-exit.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit UNIT has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[2580]: Started Exit the Session.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 58.
+Feb 14 10:12:35 kali systemd[2580]: Reached target Exit the Session.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 57.
+Feb 14 10:12:35 kali systemd[2591]: pam_unix(systemd-user:session): session closed for user lightdm
+Feb 14 10:12:35 kali systemd[1]: user@113.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit user@113.service has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[1]: Stopped User Manager for UID 113.
+-- Subject: A stop job for unit user@113.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit user@113.service has finished.
+-- 
+-- The job identifier is 1360 and the job result is done.
+Feb 14 10:12:35 kali systemd[1]: Stopping User Runtime Directory /run/user/113...
+-- Subject: A stop job for unit user-runtime-dir@113.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit user-runtime-dir@113.service has begun execution.
+-- 
+-- The job identifier is 1361.
+Feb 14 10:12:35 kali systemd[1]: run-user-113.mount: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit run-user-113.mount has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[1]: user-runtime-dir@113.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit user-runtime-dir@113.service has successfully entered the 'dead' state.
+Feb 14 10:12:35 kali systemd[1]: Stopped User Runtime Directory /run/user/113.
+-- Subject: A stop job for unit user-runtime-dir@113.service has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit user-runtime-dir@113.service has finished.
+-- 
+-- The job identifier is 1361 and the job result is done.
+Feb 14 10:12:35 kali systemd[1]: Removed slice User Slice of UID 113.
+-- Subject: A stop job for unit user-113.slice has finished
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A stop job for unit user-113.slice has finished.
+-- 
+-- The job identifier is 1362 and the job result is done.
+Feb 14 10:12:51 kali sshd[5201]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.3.3  user=root
+Feb 14 10:12:53 kali sshd[5201]: Failed password for root from 192.168.3.3 port 58896 ssh2
+Feb 14 10:12:58 kali sshd[5201]: Failed password for root from 192.168.3.3 port 58896 ssh2
+Feb 14 10:13:03 kali sshd[5201]: pam_unix(sshd:account): account root has password changed in future
+Feb 14 10:13:03 kali sshd[5201]: Accepted password for root from 192.168.3.3 port 58896 ssh2
+Feb 14 10:13:03 kali sshd[5201]: pam_unix(sshd:session): session opened for user root by (uid=0)
+Feb 14 10:13:03 kali systemd[1]: Created slice User Slice of UID 0.
+-- Subject: A start job for unit user-0.slice has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user-0.slice has finished successfully.
+-- 
+-- The job identifier is 1420.
+Feb 14 10:13:03 kali systemd[1]: Starting User Runtime Directory /run/user/0...
+-- Subject: A start job for unit user-runtime-dir@0.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user-runtime-dir@0.service has begun execution.
+-- 
+-- The job identifier is 1364.
+Feb 14 10:13:03 kali systemd-logind[394]: New session c9 of user root.
+-- Subject: A new session c9 has been created for user root
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- Documentation: https://www.freedesktop.org/wiki/Software/systemd/multiseat
+-- 
+-- A new session with the ID c9 has been created for the user root.
+-- 
+-- The leading process of the session is 5201.
+Feb 14 10:13:03 kali systemd[1]: Started User Runtime Directory /run/user/0.
+-- Subject: A start job for unit user-runtime-dir@0.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user-runtime-dir@0.service has finished successfully.
+-- 
+-- The job identifier is 1364.
+Feb 14 10:13:03 kali systemd[1]: Starting User Manager for UID 0...
+-- Subject: A start job for unit user@0.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user@0.service has begun execution.
+-- 
+-- The job identifier is 1363.
+Feb 14 10:13:03 kali systemd[5211]: pam_unix(systemd-user:account): account root has password changed in future
+Feb 14 10:13:03 kali systemd[5211]: pam_unix(systemd-user:session): session opened for user root by (uid=0)
+Feb 14 10:13:03 kali systemd[5211]: Reached target Paths.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 14.
+Feb 14 10:13:03 kali systemd[5211]: Listening on GnuPG cryptographic agent and passphrase cache (access for web browsers).
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 4.
+Feb 14 10:13:03 kali systemd[5211]: Reached target Timers.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 13.
+Feb 14 10:13:03 kali systemd[5211]: Listening on GnuPG cryptographic agent and passphrase cache (restricted).
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 11.
+Feb 14 10:13:03 kali systemd[5211]: Listening on Sound System.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 7.
+Feb 14 10:13:03 kali systemd[5211]: Listening on GnuPG cryptographic agent (ssh-agent emulation).
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 9.
+Feb 14 10:13:03 kali systemd[5211]: Listening on GnuPG cryptographic agent and passphrase cache.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 12.
+Feb 14 10:13:03 kali systemd[5211]: Listening on GnuPG network certificate management daemon.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 10.
+Feb 14 10:13:03 kali systemd[5211]: Starting D-Bus User Message Bus Socket.
+-- Subject: A start job for unit UNIT has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has begun execution.
+-- 
+-- The job identifier is 8.
+Feb 14 10:13:03 kali systemd[5211]: Listening on D-Bus User Message Bus Socket.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 8.
+Feb 14 10:13:03 kali systemd[5211]: Reached target Sockets.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 3.
+Feb 14 10:13:03 kali systemd[5211]: Reached target Basic System.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 2.
+Feb 14 10:13:03 kali systemd[5211]: Reached target Default.
+-- Subject: A start job for unit UNIT has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit UNIT has finished successfully.
+-- 
+-- The job identifier is 1.
+Feb 14 10:13:03 kali systemd[5211]: Startup finished in 153ms.
+-- Subject: User manager start-up is now complete
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The user manager instance for user 0 has been started. All services queued
+-- for starting have been started. Note that other services might still be starting
+-- up or be started at any later time.
+-- 
+-- Startup of the manager took 153427 microseconds.
+Feb 14 10:13:03 kali systemd[1]: Started User Manager for UID 0.
+-- Subject: A start job for unit user@0.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit user@0.service has finished successfully.
+-- 
+-- The job identifier is 1363.
+Feb 14 10:13:03 kali systemd[1]: Started Session c9 of user root.
+-- Subject: A start job for unit session-c9.scope has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit session-c9.scope has finished successfully.
+-- 
+-- The job identifier is 1422.
+Feb 14 10:15:01 kali CRON[5247]: pam_unix(cron:account): account root has password changed in future
+Feb 14 10:15:01 kali CRON[5247]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 14 10:15:01 kali CRON[5251]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Feb 14 10:15:01 kali CRON[5247]: pam_unix(cron:session): session closed for user root
+Feb 14 10:17:01 kali CRON[5258]: pam_unix(cron:account): account root has password changed in future
+Feb 14 10:17:01 kali CRON[5258]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 14 10:17:01 kali CRON[5262]: (root) CMD (   cd / && run-parts --report /etc/cron.hourly)
+Feb 14 10:17:01 kali CRON[5258]: pam_unix(cron:session): session closed for user root
+Feb 14 10:17:46 kali NetworkManager[407]: <info>  [1550139466.9028] device (wlan0): set-hw-addr: set MAC address to FE:77:FB:45:1C:25 (scanning)
+Feb 14 10:17:46 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:17:46 kali kernel: brcmfmac: power management disabled
+Feb 14 10:17:46 kali NetworkManager[407]: <info>  [1550139466.9217] device (wlan0): supplicant interface state: ready -> disabled
+Feb 14 10:17:46 kali NetworkManager[407]: <info>  [1550139466.9572] device (wlan0): supplicant interface state: disabled -> inactive
+Feb 14 10:17:46 kali wpa_supplicant[475]: wlan0: Reject scan trigger since one is already pending
+Feb 14 10:19:29 kali systemd[1]: Started Getty on tty2.
+-- Subject: A start job for unit getty@tty2.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty@tty2.service has finished successfully.
+-- 
+-- The job identifier is 1482.
+Feb 14 10:19:30 kali systemd[1]: Started Getty on tty3.
+-- Subject: A start job for unit getty@tty3.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty@tty3.service has finished successfully.
+-- 
+-- The job identifier is 1541.
+Feb 14 10:19:31 kali systemd[1]: Started Getty on tty4.
+-- Subject: A start job for unit getty@tty4.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty@tty4.service has finished successfully.
+-- 
+-- The job identifier is 1600.
+Feb 14 10:19:32 kali systemd[1]: Started Getty on tty5.
+-- Subject: A start job for unit getty@tty5.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty@tty5.service has finished successfully.
+-- 
+-- The job identifier is 1659.
+Feb 14 10:19:32 kali systemd[1]: Started Getty on tty6.
+-- Subject: A start job for unit getty@tty6.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit getty@tty6.service has finished successfully.
+-- 
+-- The job identifier is 1718.
+Feb 14 10:23:02 kali NetworkManager[407]: <info>  [1550139782.9643] device (wlan0): set-hw-addr: set MAC address to CE:CF:70:15:5F:92 (scanning)
+Feb 14 10:23:02 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:23:02 kali kernel: brcmfmac: power management disabled
+Feb 14 10:23:02 kali NetworkManager[407]: <info>  [1550139782.9824] device (wlan0): supplicant interface state: inactive -> disabled
+Feb 14 10:23:02 kali NetworkManager[407]: <info>  [1550139782.9827] device (wlan0): supplicant interface state: disabled -> inactive
+Feb 14 10:23:02 kali wpa_supplicant[475]: wlan0: Reject scan trigger since one is already pending
+Feb 14 10:25:01 kali CRON[5297]: pam_unix(cron:account): account root has password changed in future
+Feb 14 10:25:01 kali CRON[5297]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 14 10:25:01 kali CRON[5301]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Feb 14 10:25:01 kali CRON[5297]: pam_unix(cron:session): session closed for user root
+Feb 14 10:27:01 kali systemd[1]: Starting Cleanup of Temporary Directories...
+-- Subject: A start job for unit systemd-tmpfiles-clean.service has begun execution
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-clean.service has begun execution.
+-- 
+-- The job identifier is 1777.
+Feb 14 10:27:01 kali systemd[1]: systemd-tmpfiles-clean.service: Succeeded.
+-- Subject: Unit succeeded
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- The unit systemd-tmpfiles-clean.service has successfully entered the 'dead' state.
+Feb 14 10:27:01 kali systemd[1]: Started Cleanup of Temporary Directories.
+-- Subject: A start job for unit systemd-tmpfiles-clean.service has finished successfully
+-- Defined-By: systemd
+-- Support: https://www.debian.org/support
+-- 
+-- A start job for unit systemd-tmpfiles-clean.service has finished successfully.
+-- 
+-- The job identifier is 1777.
+Feb 14 10:28:18 kali NetworkManager[407]: <info>  [1550140098.9055] device (wlan0): set-hw-addr: set MAC address to 5E:8B:3B:BA:E3:8A (scanning)
+Feb 14 10:28:18 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:28:18 kali kernel: brcmfmac: power management disabled
+Feb 14 10:28:18 kali NetworkManager[407]: <info>  [1550140098.9228] device (wlan0): supplicant interface state: inactive -> disabled
+Feb 14 10:28:18 kali NetworkManager[407]: <info>  [1550140098.9231] device (wlan0): supplicant interface state: disabled -> inactive
+Feb 14 10:28:18 kali wpa_supplicant[475]: wlan0: Reject scan trigger since one is already pending
+Feb 14 10:33:34 kali NetworkManager[407]: <info>  [1550140414.9652] device (wlan0): set-hw-addr: set MAC address to B6:0D:E9:1F:F2:E1 (scanning)
+Feb 14 10:33:34 kali kernel: IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+Feb 14 10:33:34 kali kernel: brcmfmac: power management disabled
+Feb 14 10:33:34 kali NetworkManager[407]: <info>  [1550140414.9848] device (wlan0): supplicant interface state: inactive -> disabled
+Feb 14 10:33:34 kali NetworkManager[407]: <info>  [1550140414.9855] device (wlan0): supplicant interface state: disabled -> inactive
+Feb 14 10:33:34 kali wpa_supplicant[475]: wlan0: Reject scan trigger since one is already pending
+Feb 14 10:35:01 kali CRON[5335]: pam_unix(cron:account): account root has password changed in future
+Feb 14 10:35:01 kali CRON[5335]: pam_unix(cron:session): session opened for user root by (uid=0)
+Feb 14 10:35:01 kali CRON[5339]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Feb 14 10:35:01 kali CRON[5335]: pam_unix(cron:session): session closed for user root
